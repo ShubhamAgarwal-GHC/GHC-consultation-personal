@@ -2,6 +2,8 @@
     "KNOW_WHATS_RIGHT_FOR_YOU" : "Know what's right for you",
     "BANNER_INFO" : ["Get your self assessment done","Book an appointment with our expert","Get a personalized treatment plan"],
     "BANNER_IMAGE_SRC" : "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
-    "START_YOUR_SELF_ASSESSMENT" : "Start your Self Assessment",
-    "GET_TO_KNOW_YOUR_NEEDS" : "Get to know your needs better with just few clicks"
+    "START_YOUR_SELF_ASSESSMENT" : "Start Your Self Assessment",
+    "GET_TO_KNOW_YOUR_NEEDS" : "Get to know your needs better with just few clicks",
+    "SELECT_CATEGORY" : "Select category for consultation",
+    "WE_RECOMMEND_ONLY_THE_BEST" : "We Recommend only the best for you"
 }

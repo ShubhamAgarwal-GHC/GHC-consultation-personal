@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "../Css/LandingPage.css"
+
 import Header from "./Header";
 import SelfAssessmentSection from "./SelfAssessmentSection";
-import { useEffect } from "react";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -9,10 +10,10 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <>
+    <div className="main-landing-page">
       <Header/>
       <SelfAssessmentSection/>
-    </>
+    </div>
   );
 };
 

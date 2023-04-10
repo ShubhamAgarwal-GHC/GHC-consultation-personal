@@ -1,0 +1,49 @@
+.assessment-card-0{
+    border: 1px solid #000000;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 10%;
+    background: white;
+}
+.assessment-card-1{
+    border: 1px solid #000000;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 10%;
+    background: white;
+    width: 100%;
+    display: grid;
+    margin: auto;
+}
+.heading {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Gilmer Bold";
+    padding-bottom: 6%;
+}
+.report-text-content {
+    text-align: center;
+}
+.button {
+    margin: auto;
+    border-radius: 17px;
+    height: 7vh;
+    font-size: 3vh;
+    width: 60%;
+    align-content: center;
+    text-align: center;   
+    background: black;
+    color: white; 
+}
+
+.button-category {
+    margin: auto;
+    border-radius: 17px;
+    height: 7vh;
+    font-size: 3vh;
+    width: 60%;
+    align-content: center;
+    text-align: center;   
+    /* background: black; */
+    color: white; 
+}

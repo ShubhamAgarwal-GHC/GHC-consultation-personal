@@ -1,0 +1,14 @@
+.main-landing-page {
+    /* border: 2px solid black; */
+    background-image: url("../Images/home_page_doctor.png");
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    background-size: cover;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .main-landing-page {
+        flex-direction: column;
+    }
+}

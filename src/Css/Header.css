@@ -1,4 +1,59 @@
 .header-block {
+  /* border: 4px solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: flex-start;
+  margin-top: 5%;
+}
+
+.assessment-header {
+  /* border: 1px solid; */
+  font-size: 2em;
+  /* margin: 10%; */
+  font-family: "Gilmer Bold";
+  /* margin: 10%; */
+  margin: 0px 29px;
+}
+
+.assessment-list {
+  /* border: 1px solid blue; */
+  /* padding: 15%; */
+  /* margin: 3%; */
+}
+.header-text {
+  font-size: 20px;
+  line-height: 253%;
+  color: black;
+  font-weight: bolder;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .header-block {
+    width: 100%;
+    margin-top: 60%;
+    margin-left: 5%;
+  }
+  .assessment-header {
+    margin-top: -25%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .header-block {
     background: #eaf2ff;
     border-radius: 30px;
     height: 30%;
@@ -40,4 +95,4 @@
       margin-top: 3%;
     }
   }
-  
+   */

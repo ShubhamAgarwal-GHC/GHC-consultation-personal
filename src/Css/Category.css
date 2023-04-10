@@ -1,0 +1,114 @@
+.category-container {
+    display: flex;
+    background: aqua;
+    justify-content: center;
+    height: 70vh;
+    margin: 0px 0% 3% 0%;
+}
+
+.category-heading {
+    background: antiquewhite;
+    font-family: fantasy;
+    text-align: center;
+    height: 10vh;
+    padding: 3vh;
+    font-size: 3vh;
+}
+
+.cateorgy-lists {
+    /* border: 2px solid black; */
+    margin: 0;
+    padding: 7vh;
+}
+
+
+.cateorgy-lists li {
+    border: 2px solid red;
+    list-style: ;
+    padding: 2vh;
+    margin: 3vh;
+    border-radius: 3vh;
+    width: 40vw;
+    font-size: 3vh;
+    text-align: center;
+    list-style: none;
+}
+
+.button {
+    display: grid;
+    margin-top: 50px;
+}
+
+.btn {
+    border-radius: 17px;
+    height: 7vh;
+    font-size: 3vh;
+    margin-bottom: 0vh;
+    width: 18%;
+    align-content: center;
+    text-align: center;
+    margin-left: 0vw;
+    display: grid;
+    margin: auto;
+}
+
+li.selected {
+    background-color: blue;
+    color: white;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .category-container {
+        display: flex;
+        background: aqua;
+        justify-content: center;
+        height: 78vh;
+    }
+
+    .category-heading {
+        background: antiquewhite;
+        font-family: fantasy;
+        text-align: center;
+        height: 10vh;
+        padding: 3vh;
+        font-size: 3vh;
+    }
+
+    .cateorgy-lists {
+        /* border: 2px solid black; */
+        margin: 0;
+        padding: 0vh;
+        display: grid;
+        justify-content: center;
+    }
+
+
+    .cateorgy-lists li {
+        border: 2px solid red;
+        padding: 2vh;
+        margin: 3vh;
+        border-radius: 3vh;
+        width: 63vw;
+        font-size: 3vh;
+        text-align: center;
+        list-style: none;
+    }
+
+    .button {
+        display: grid;
+        margin-top: 50px;
+    }
+
+    .btn {
+        border-radius: 17px;
+        height: 7vh;
+        font-size: 3vh;
+        margin-bottom: 0vh;
+        width: 60%;
+        align-content: center;
+        text-align: center;
+        margin-left: 0vw;
+        display: grid;
+        margin: auto;
+    }
+}

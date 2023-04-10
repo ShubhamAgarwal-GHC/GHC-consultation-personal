@@ -1,4 +1,37 @@
-.assessment-header{
+.self-assessment-section{
+    /* border: 4px solid brown; */
+}
+
+.self-assessment-cards {
+    /* border: 4px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    padding: 3%;
+    height: 100%;
+    /* box-sizing: border-box; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .assessment-header{
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -26,7 +59,6 @@
 .assessment-card {
     border-style: solid ;
     background: #FFFFFF;
-    /* border: 1px solid var(--border); */
     box-sizing: border-box;
     border-radius: 24px;
     height: 130%;
@@ -88,7 +120,6 @@
     color: #333333;
 }
 
-/* end */
 
 
 
@@ -280,13 +311,13 @@
 }
 
 
-/* @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     .start-assessment-heading,.get-started,.assessment-card-section {
         display: none;
     }
-} */
-
-/* @media only screen and (max-width: 600px) {
+}
+ 
+@media only screen and (max-width: 600px) {
     .header-block, .self-assessment-section {
         display: none;
     }
