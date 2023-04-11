@@ -1,8 +1,6 @@
 import React from "react";
 
-const ImageTextVertical = (props) => {
-    const OPTIONS = props.options;
-    const setOptionSelected = props.setOptionSelected;
+const ImageTextVertical = ({ question, OPTIONS, setOptionSelected }) => {
 
   const handleClick = (optionSelected) => {
     setOptionSelected(optionSelected);

@@ -31,7 +31,7 @@ const AssessmentCard = (props) => {
       </div> */}
       <div className="heading">{card.typeOfAssessment}</div>
       {card.features.map((feature, index) => {
-        return <div className="report-text-content">{feature}</div>;
+        return <div key = {index} className="report-text-content">{feature}</div>;
       })}
       <button className="button" onClick={() => handleClcik(card.cardType)}>
         {" "}
