@@ -1,9 +1,21 @@
 import React from "react";
 import "../../Css/ImageTextHorizontal.css";
 
-const ImageTextHorizontal = ({ question, OPTIONS, setOptionSelected }) => {
+const ImageTextHorizontal = ({ question, OPTIONS, setOptionSelected, optionSelected, multipleSelectAllowed }) => {
+
   const handleClick = (optionSelected) => {
-    setOptionSelected(optionSelected);
+    multipleSelectAllowed ? setOptionSelected((previousState) => {
+      if(previousState.includes(optionSelected)) {
+        return previousState.filter(function(value) {
+          return value !== optionSelected;
+        });
+      } else {
+        return [
+          ...previousState,
+          optionSelected
+        ]
+      }
+    }) : setOptionSelected([optionSelected])
   };
 
   console.log("OPTIONS",OPTIONS);
@@ -22,8 +34,8 @@ const ImageTextHorizontal = ({ question, OPTIONS, setOptionSelected }) => {
                 alt=""
               />
               <li
-                className="image-text-horizontal-text"
-                onClick={() => handleClick(option.displayText)}
+                className={`image-text-horizontal-text ${optionSelected.includes(index) ? 'selected' : ''}`}
+                onClick={() => handleClick(index)}
               >
                 {option.displayText}
               </li>

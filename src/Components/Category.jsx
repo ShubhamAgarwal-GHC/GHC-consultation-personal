@@ -17,6 +17,12 @@ const Category = () => {
 
   useEffect(() => {
     console.log('selectedCategory:', selectedCategory);
+    setConsultDataState((previousState) => {
+      return {
+        ...previousState,
+        user_survey : []
+      }
+    })
   }, [selectedCategory]);
 
 

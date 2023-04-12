@@ -9,25 +9,46 @@ import StepProgressBar from "./StepProgressBar";
 import "../Css/StepProgressBar.css";
 
 const QuestionsCard = () => {
-  const [currentPageIndex, setCurrentPageIndex] = useState(0);
-  const [optionSelected, setOptionSelected] = useState(0);
-  const [stepsDetails, setStepsDetails] = useState({});
   const location = useLocation();
   const navigate = useNavigate();
-  const [consultDataState, setConsultDataState] = useContext(Context);
-  
+
+  const [currentPageIndex, setCurrentPageIndex] = useState(0); //keep track of current question 
+
   const { brand, assessmentType, categoryType } = location.state;
   const QUESTIONS_OBJECT = QUESTIONS_WITH_OPTIONS[brand][assessmentType][categoryType];
   const QUESTIONS_ARRAY = QUESTIONS_OBJECT.questions;
   const OptionComponentToRender = OPTIONS_COMPONENT[QUESTIONS_ARRAY[currentPageIndex].optionType];
 
-  const handlePreviousPage = () => {
-    if (currentPageIndex > 0) {
-      setCurrentPageIndex(currentPageIndex - 1);
-    }
-  };
+
+  
+  const [stepsDetails, setStepsDetails] = useState({}); // this is used for the progessbar
+  const [consultDataState, setConsultDataState] = useContext(Context); // this is the global object which stores all the info
+  const [optionSelected, setOptionSelected] = useState([QUESTIONS_ARRAY[currentPageIndex]["defaultOptionIndex"]]); // keep the data of the option selected for the current question
+  const [optionSelectedObj, setOptionSelectedObj] = useState({});
+
+  
+  useEffect(() => {
+    setStepsDetails(details); // Update the state with the retrieved data
+  }, [currentPageIndex]);
+
+  useEffect(() => {
+    const value = QUESTIONS_ARRAY[currentPageIndex].skipToQuestion(optionSelectedObj);
+    console.log("value",value);
+    setCurrentPageIndex(value)
+  }, [optionSelectedObj]);
 
   const handleNextPage = () => {
+
+    // This is the test to handle question skip
+    setOptionSelectedObj((prevState) => {
+      return {
+        ...prevState,
+        [currentPageIndex] : optionSelected
+      }
+    })
+    setOptionSelected([0])
+    //end
+
     if (currentPageIndex < QUESTIONS_ARRAY.length - 1) {
       setCurrentPageIndex(currentPageIndex + 1);
 
@@ -46,6 +67,14 @@ const QuestionsCard = () => {
       navigate("/contactForm", { state: { cardType: "cardType" } });
     }
   };
+
+  
+  const handlePreviousPage = () => {
+    if (currentPageIndex > 0) {
+      setCurrentPageIndex(currentPageIndex - 1);
+    }
+  };
+
 
   const getStepsDetails = () => {
     const allQuestions = QUESTIONS_OBJECT.questions;
@@ -76,9 +105,6 @@ const QuestionsCard = () => {
 
   const details = getStepsDetails(); // Call your function here to retrieve data
 
-  useEffect(() => {
-    setStepsDetails(details); // Update the state with the retrieved data
-  }, [currentPageIndex]);
 
   // adding "details" in dependency array is cauing unnecessary rerenderning
 
@@ -94,6 +120,8 @@ const QuestionsCard = () => {
         question={QUESTIONS_ARRAY[currentPageIndex].question}
         OPTIONS={QUESTIONS_ARRAY[currentPageIndex].options}
         setOptionSelected={setOptionSelected}
+        optionSelected = {optionSelected}
+        multipleSelectAllowed = {QUESTIONS_ARRAY[currentPageIndex].multipleSelectAllowed}
       />
 
       <button onClick={handlePreviousPage} disabled={currentPageIndex === 0}>
