@@ -1,5 +1,5 @@
 .category {
-    border: 1px solid white;
+    border: 000.1px solid white;
     background: #E5E5E5;
     height: 100vh;
     box-sizing: border-box;
@@ -13,16 +13,9 @@
     box-sizing: border-box;
     width: 272px;
     height: 52px;
-    margin-top: 10%;
+    margin-top: 6%;
+    margin-bottom: 4%;
 }
-
-.category-container {
-    /* border: 2px solid pink; */
-    display: flex;
-    justify-content: center;
-    margin-top: 2%;
-}
-
 .cateorgy-lists {
     /* border: 2px solid yellow; */
     display: flex;
@@ -45,6 +38,8 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    margin: auto;
+    margin-bottom: 2%;
 }
 .cateorgy-lists-item > li{
     list-style: none;
@@ -65,6 +60,16 @@
 }
 .categoryContinueArrow{
     padding-right: 12%;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .category-heading{
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    .cateorgy-lists-item{
+        margin-bottom: 8%;
+    }
 }
 
 

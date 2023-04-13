@@ -36,8 +36,7 @@ const Category = () => {
       <div className="category-heading">
         <h1>{CONSTANT.SELECT_CATEGORY}</h1>
       </div>
-      <div className="category-container">
-        <div className="cateorgy-lists">
+      <div className="cateorgy-lists">
           {CATEGORIES.map((category, index) => {
             return (
               <div key={index} className="cateorgy-lists-item" onClick={() => handleClick(index)}>
@@ -51,7 +50,6 @@ const Category = () => {
             );
           })}
         </div>
-      </div>
     </div>
   );
 };
