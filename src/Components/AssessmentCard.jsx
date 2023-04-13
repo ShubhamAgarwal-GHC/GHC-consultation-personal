@@ -4,9 +4,7 @@ import "../Css/SelfAssessmentSection.css";
 import { Context } from "./Store";
 import "../Css/AssessmentCard.css";
 
-const AssessmentCard = (props) => {
-  const card = props.card;
-  const cardNum = props.cardNum;
+const AssessmentCard = ({ card, cardNum }) => {
   const [consultDataState, setConsultDataState] = useContext(Context);
   const navigate = useNavigate();
 
@@ -20,18 +18,14 @@ const AssessmentCard = (props) => {
   };
 
   return (
-    <div className= {cardNum % 2 === 0 ? "assessment-card-0" : "assessment-card-1"}>
-      {/* <div className="time-section">
-        <div className="stopwatch">
-          <div className="clock">
-            <img src={card.timerImage} alt="" />
-          </div>
-          {<div className="stopwatch-text">{card.timeToAssessment}</div>}
-        </div>
-      </div> */}
+    <div className={"assessment-card"}>
       <div className="heading">{card.typeOfAssessment}</div>
       {card.features.map((feature, index) => {
-        return <div key = {index} className="report-text-content">{feature}</div>;
+        return (
+          <div key={index} className="text-content">
+            {feature}
+          </div>
+        );
       })}
       <button className="button" onClick={() => handleClcik(card.cardType)}>
         {" "}

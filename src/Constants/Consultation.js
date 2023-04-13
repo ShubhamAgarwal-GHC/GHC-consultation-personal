@@ -1,9 +1,6 @@
-import image_30_sec from "../Images/30-sec-small.png";
-import image_60_sec from "../Images/60-sec-small.png";
-import image_green_tick from "../Images/green-tick.png";
 import ImageTextHorizontal from "../Components/Options/ImageTextHorizontal";
 import ImageTextVertical from "../Components/Options/ImageTextVertical";
-import Isolation_Mode from "../Images/Isolation_Mode.png";
+// import "" from "../Images/"".png";
 
 /*
             NOTE-1
@@ -22,23 +19,15 @@ import Isolation_Mode from "../Images/Isolation_Mode.png";
 
 const ASSESSMENT_CARDS = [
   {
-    timeToAssessment: "30 sec",
     typeOfAssessment: "Quick Assessment",
-    timerImage: image_30_sec,
-    features: ["Get recommended products that suit your concerns"],
-    listType: image_green_tick,
-    buttonText: "Start",
+    features: ["Take a quick assessment and get a treatment plan tailored to address your specific concerns"],
+    buttonText: "Start Assessment",
     cardType: "short",
   },
   {
-    timeToAssessment: "6 Mins",
-    typeOfAssessment: "Detailed Self Assessment",
-    timerImage: image_60_sec,
-    features: [
-      "Get a free Doctor’s consultation and Personalized Treatment Plan",
-    ],
-    listType: image_green_tick,
-    buttonText: "Start",
+    typeOfAssessment: "Schedule a FREE Call",
+    features: ["Get in touch with our in house health experts and get personalized treatment plan"],
+    buttonText: "Consult an Expert",
     cardType: "long",
   },
 ];
@@ -626,7 +615,7 @@ const QUESTIONS_WITH_OPTIONS = {
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
-              return 6;
+              return 7;
             },
             options: [
               // This will be a input box
@@ -662,7 +651,7 @@ const QUESTIONS_WITH_OPTIONS = {
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
-              return 6;
+              return 8;
             },
             options: [
               // This will be a input box
@@ -697,22 +686,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Regrowing your hair",
                 value: "hair_regrowth",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair fall",
                 optionType: "checkbox",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
             ],
           },
@@ -730,22 +719,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Regrowing your hair2",
                 value: "hair_regrowth2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair fall2",
                 optionType: "checkbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining2",
                 optionType: "textbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
             ],
           },
@@ -774,22 +763,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Regrowing your hair",
                 value: "hair_regrowth",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair fall",
                 optionType: "checkbox",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
             ],
           },
@@ -808,22 +797,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Regrowing your hair2",
                 value: "hair_regrowth2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair fall2",
                 optionType: "checkbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining2",
                 optionType: "textbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
             ],
           },
@@ -842,22 +831,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Regrowing your hair2",
                 value: "hair_regrowth2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair fall2",
                 optionType: "checkbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining2",
                 optionType: "textbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
             ],
           },
@@ -876,22 +865,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Regrowing your hair2",
                 value: "hair_regrowth2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair fall2",
                 optionType: "checkbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining2",
                 optionType: "textbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
             ],
           },
@@ -910,22 +899,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Regrowing your hair2",
                 value: "hair_regrowth2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair fall2",
                 optionType: "checkbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining2",
                 optionType: "textbox2",
-                image: Isolation_Mode,
+                image: "",
               },
               {
                 displayText: "hair thining",
                 optionType: "textbox",
-                image: Isolation_Mode,
+                image: "",
               },
             ],
           },

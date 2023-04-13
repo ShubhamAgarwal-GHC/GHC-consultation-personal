@@ -29,11 +29,10 @@ const QuestionsCard = () => {
   
   useEffect(() => {
     setStepsDetails(details); // Update the state with the retrieved data
-  }, [currentPageIndex]);
+  }, []);
 
   useEffect(() => {
     const value = QUESTIONS_ARRAY[currentPageIndex].skipToQuestion(optionSelectedObj);
-    console.log("value",value);
     setCurrentPageIndex(value)
   }, [optionSelectedObj]);
 

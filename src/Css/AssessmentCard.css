@@ -1,20 +1,50 @@
-.assessment-card-0{
-    border: 1px solid #000000;
-    margin: 5%;
-    padding: 5%;
-    border-radius: 10%;
-    background: white;
+.self-assessment-cards {
+    /* border: 1px solid yellow; */
+    display: flex;
 }
-.assessment-card-1{
+
+.assessment-card {
     border: 1px solid #000000;
-    margin: 5%;
-    padding: 5%;
-    border-radius: 10%;
+    margin: 2%;
     background: white;
-    width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border-radius: 16px;
+}
+
+.assessment-card>.heading {
+    font-family: 'Futura Hv BT';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 3%;
+}
+
+.assessment-card > .text-content{
+    font-family: 'Futura Lt BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 5% 0%;
+}
+
+.assessment-card > .button {
+    width: 300px;
+    height: 44px;
+    background: #333333;
+    border-radius: 10px;
+    padding: 0%;
+    color: white;
+    display: flex;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
+
+/* 
 .heading {
     text-align: center;
     font-size: 25px;
@@ -44,6 +74,5 @@
     width: 60%;
     align-content: center;
     text-align: center;   
-    /* background: black; */
     color: white; 
-}
+} */

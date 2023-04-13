@@ -1,6 +1,13 @@
 {
+    "Your_FREE_online_consultation_starts_here" : "Your FREE online consultation starts here",
+    "2_3_mins": "2-3 mins",
+    "8_10_questions" : "8-10 questions",
+    "Health_Expert" : "Health expert to assist you based on your response",
+    "Personalized_Treatment" : "Personalized treatment plan",
+
+    
     "KNOW_WHATS_RIGHT_FOR_YOU" : "Know what's right for you",
-    "BANNER_INFO" : ["Get your self assessment done","Book an appointment with our expert","Get a personalized treatment plan"],
+    "BANNER_INFO" : ["2-3 mins", "8-10 questions", "Health expert to assist you based on your response", "Personalized treatment plan "],
     "BANNER_IMAGE_SRC" : "https://cdn.shopify.com/s/files/1/0638/1391/0746/files/Doctor.png?v=1649252836",
     "START_YOUR_SELF_ASSESSMENT" : "Start Your Self Assessment",
     "GET_TO_KNOW_YOUR_NEEDS" : "Get to know your needs better with just few clicks",
