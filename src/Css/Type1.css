@@ -1,0 +1,120 @@
+.type1-main {
+    /* border: 2px solid black; */
+    background: #E5E5E5;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.type1-question {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-sizing: border-box;
+    width: 50%;
+    height: 12%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.selectedAllthatApply{
+    display: flex;
+    justify-content: center;
+}
+.selectedAllthatApply > h4{
+    font-family: Futura Md BT;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.type1-all-options {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+}
+
+.type1-option {
+    /* border: 2px solid brown; */
+    width: 300px;
+    /* height: 91px; */
+    margin-top: 3%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: inherit;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    align-items: center;
+    font-family: 'Futura Hv BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin: auto;
+    margin-bottom: 1.1%;
+    padding: 1%;
+}
+
+.type1-option>li {
+    list-style: none;
+    padding-left: 8%;
+}
+
+.type1-image {
+    /* border: 2px solid gray; */
+    width: 63px;
+    height: 63px;
+}
+
+.type1-text {
+    /* border: 2px solid yellow; */
+}
+
+.type1-button {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    height: 5%;
+    padding-bottom: 1%;
+}
+
+.type1-button>button {
+    width: 18%;
+    border-radius: 6px;
+    color: white;
+    background: black;
+
+}
+
+.type1-all-options>.selected {
+    background: grey;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .type1-main{
+        height: 100vh;
+    }
+    .type1-question {
+        margin-top: 20%;
+        margin-bottom: 10%;
+        width: 350px;
+    }
+
+    .type1-all-options {
+        margin-bottom: 8%;
+    }
+    .type1-option{
+        margin-bottom: 8%;
+        padding: 2%;
+    }
+    .type1-button > button{
+        width: 40%;
+    }
+}

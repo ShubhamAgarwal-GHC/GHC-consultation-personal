@@ -8,7 +8,7 @@ const StepProgressBar = ({stepsDetails}) => {
     <ProgressBar
       percent={stepsDetails.percent}
       filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
-      stepPositions = {stepsDetails.stepPositions}
+      
     >
       <Step transition="scale">
         {({ accomplished }) => (

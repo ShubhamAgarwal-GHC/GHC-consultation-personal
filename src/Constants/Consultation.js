@@ -1,5 +1,11 @@
-import ImageTextHorizontal from "../Components/Options/ImageTextHorizontal";
-import ImageTextVertical from "../Components/Options/ImageTextVertical";
+import Type1 from "../Components/Options/Type1";
+import along_the_hairline from "../Images/along_the_hairline.png"
+import overall_hairloss from "../Images/overall_hairloss.png"
+import receding_hairline_and_overall_thining from "../Images/receding_hairline_and_overall_thining.png"
+import thining_at_the_crown from "../Images/thining_at_the_crown.png"
+
+
+// import Type1 from "../Components/Options/Type1";
 // import "" from "../Images/"".png";
 
 /*
@@ -45,8 +51,7 @@ const CATEGORIES_FOR_ASSESSMENT = {
 };
 
 const OPTIONS_COMPONENT = {
-  imageTextHorizontal: ImageTextHorizontal,
-  imageTextVertical: ImageTextVertical,
+  Type1: Type1,
 };
 
 // all questions/options number are 0-index based
@@ -54,19 +59,18 @@ const QUESTIONS_WITH_OPTIONS = {
   MARS: {
     SHORT: {
       HAIR: {
-        isProgressBarRequired: false,
+        isProgressBarRequired: true,
         questions: [
           {
             questionId: 0,
             nextQuestionid: 1,
             previousQuestionId: -1, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "What best describes the current condition of your hair?", //req
             quotes:
               "Hair loss affects 60.5 % of the total Men population in India", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             // Refer NOTE-1
             skipToQuestion: (obj) => {
@@ -77,22 +81,22 @@ const QUESTIONS_WITH_OPTIONS = {
               {
                 displayText: "Receding hairline",
                 value: "receding_hairline",
-                image: "",
+                image: along_the_hairline,
               },
               {
                 displayText: "Thinning at the crown",
                 value: "thinning_at_the_crown",
-                image: "",
+                image: thining_at_the_crown,
               },
               {
                 displayText: "Overall hair loss/thinning",
                 value: "Overall_hair_loss/thinning",
-                image: "",
+                image: overall_hairloss,
               },
               {
                 displayText: "receding + overall thinning",
                 value: "receding_overall_thinning",
-                image: "",
+                image: receding_hairline_and_overall_thining,
               },
             ],
           },
@@ -101,8 +105,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 1,
             nextQuestionid: 2,
             previousQuestionId: 0, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "Have you tried hair loss treatments before?", //req
             quotes: "", //req
             quotesDelay: "", //req
@@ -130,8 +133,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 2,
             nextQuestionid: 3,
             previousQuestionId: 1, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "Which treatments have you tried?", //req
             quotes: "", //req
             quotesDelay: "", //req
@@ -180,8 +182,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 3,
             nextQuestionid: 4,
             previousQuestionId: 2, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "How did these treatments go?", //req
             quotes: "", //req
             quotesDelay: "", //req
@@ -214,8 +215,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 4,
             nextQuestionid: 5,
             previousQuestionId: 3, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "What results are you looking for?", //req
             quotes:
               "50% of the male pattern baldness can be attributed due to  hereditary roots.However, hereditary male pattern baldness is treatable by taking early preventive actions", //req
@@ -249,8 +249,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 5,
             nextQuestionid: 6,
             previousQuestionId: 4, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "Does anyone in your family have hair loss?", //req
             quotes:
               "FACT: Every time we try a new medication it takes time for our body to react. Similarly, we can observe minimal hair loss when we start to use minoxidil for a few days", //req
@@ -279,8 +278,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 6,
             nextQuestionid: -1, // req -> no more question
             previousQuestionId: 5, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question:
               "Our doctors need a photo of your scalp selfie photo descriptive image for how to take photo", //req
             quotes: "", //req
@@ -303,14 +301,13 @@ const QUESTIONS_WITH_OPTIONS = {
         ],
       },
       PERFORMANCE: {
-        isProgressBarRequired: false,
+        isProgressBarRequired: true,
         questions: [
           {
             questionId: 0,
             nextQuestionid: 1,
             previousQuestionId: -1, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "What problems are you facing?", //req
             quotes: "",
             quotesDelay: "", //req
@@ -349,8 +346,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 1,
             nextQuestionid: 2,
             previousQuestionId: 0, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "In the last 3 months, how often were you able to get an erection during sexual activity?", //req
             quotes: "", //req
             quotesDelay: "", //req
@@ -397,8 +393,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 2,
             nextQuestionid: 3,
             previousQuestionId: 1, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "In the last 3 months, how often were you able to sustain the erection till ejaculation?", //req
             quotes: "", //req
             quotesDelay: "", //req
@@ -436,8 +431,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 3,
             nextQuestionid: 4,
             previousQuestionId: 2, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "What concerns are you experiencing with respect to ejaculation? Ejaculation - when one orgasms or climaxes and semen is released from the penis.", //req
             quotes: "", //req
             quotesDelay: "", //req
@@ -476,8 +470,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 4,
             nextQuestionid: 5,
             previousQuestionId: 3, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "How often do you have trouble getting or keeping an erection during sex?", //req
             quotes: "40% of men experience symptoms like this by the age of 40", //req
             quotesDelay: 300, //req
@@ -515,8 +508,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 5,
             nextQuestionid: 6,
             previousQuestionId: 4, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "How long were you able to last during sex in the last 3 months?", //req
             quotes: "30-40% of the men experience this at some point in their lives Understanding more about your condition helps us suggest the best-suited plan for you",
             quotesDelay: 300, //req
@@ -554,8 +546,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 6,
             nextQuestionid: -1, // req -> no more question
             previousQuestionId: 5, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question:
               "Have you been diagnosed with any of the following illness or disorders?", //req
             quotes: "Knowing your physical strength during intercourse helps us navigate to the right treatment for you", //req
@@ -605,8 +596,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 7,
             nextQuestionid: 8, // req -> no more question
             previousQuestionId: 6, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question:
               "Do you consume any of the following?", //req
             quotes: "", //req
@@ -642,8 +632,7 @@ const QUESTIONS_WITH_OPTIONS = {
             questionId: 8,
             nextQuestionid: -1, // req -> no more question
             previousQuestionId: 7, // req -> -1 if its the first question
-            optionType: "imageTextHorizontal",
-            type: "radio", // radio, checkbox, input, textarea (will remove)
+            optionType: "Type1",
             question: "Do you experience cramps or tiredness while having sex?", //req
             quotes: "", //req
             quotesDelay: "", //req
@@ -670,11 +659,11 @@ const QUESTIONS_WITH_OPTIONS = {
         ],
       },
       SKIN: {
-        isProgressBarRequired: false,
+        isProgressBarRequired: true,
         questions: [
           {
             questionId: 0,
-            optionType: "imageTextHorizontal",
+            optionType: "Type1",
             question: "whats best descrribe the condition of your hair?", //req
             previousQuestionId: -1, // req -> -1 if its the first question
             nextQuestionid: 1,
@@ -751,7 +740,7 @@ const QUESTIONS_WITH_OPTIONS = {
           {
             questionId: 0,
             belongsToProgressBarItem: "Basic",
-            optionType: "imageTextHorizontal",
+            optionType: "Type1",
             question: "whats best descrribe the condition of your hair?", //req
             previousQuestionId: -1, // req -> -1 if its the first question
             nextQuestionid: 1,
