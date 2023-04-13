@@ -18,7 +18,8 @@ const AssessmentCard = ({ card, cardNum }) => {
   };
 
   return (
-    <div className={"assessment-card"}>
+    // className={`image-text-horizontal-text ${optionSelected.includes(index) ? 'selected' : ''}`}
+    <div className={`assessment-card`}>
       <div className="heading">{card.typeOfAssessment}</div>
       {card.features.map((feature, index) => {
         return (

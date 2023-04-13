@@ -1,6 +1,8 @@
 .main-landing-page {
     /* border: 2px solid black; */
     background: #E5E5E5;
+    padding: 5% 5% 0% 5%;
+    box-sizing: border-box;
     height: 100vh;
 }
 

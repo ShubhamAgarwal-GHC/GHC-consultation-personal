@@ -1,6 +1,7 @@
 .self-assessment-cards {
     /* border: 1px solid yellow; */
     display: flex;
+    padding: 0% 3% 0% 3%;
 }
 
 .assessment-card {
@@ -11,9 +12,15 @@
     flex-direction: column;
     padding: 2%;
     border-radius: 16px;
+    width: 334px;
+    height: 159px;
 }
 
-.assessment-card>.heading {
+.assessment-card:hover {
+    transform: scale(1.1);
+}
+
+.assessment-card > .heading {
     font-family: 'Futura Hv BT';
     font-style: normal;
     font-weight: bold;
@@ -42,6 +49,7 @@
     margin: auto;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 /* 
