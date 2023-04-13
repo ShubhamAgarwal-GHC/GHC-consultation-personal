@@ -4,22 +4,9 @@
 }
 
 
-
-
-
-
-
-
-
-/* .self-assessment-section{
-    border: 4px solid brown;
+@media only screen and (max-device-width: 480px) {
+    .self-assessment {
+        margin: 0%;
+        margin-bottom: -15%;
+    }
 }
-
-.self-assessment-cards {
-    border: 4px solid black;
-    display: flex;
-    flex-direction: column;
-    margin: 3%;
-    padding: 3%;
-    height: 100%;
-} */

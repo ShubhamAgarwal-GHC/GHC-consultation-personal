@@ -7,4 +7,10 @@
 }
 
 @media only screen and (max-device-width: 480px) {
+    .main-landing-page{
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }

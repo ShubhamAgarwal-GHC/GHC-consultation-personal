@@ -52,35 +52,26 @@
     cursor: pointer;
 }
 
-/* 
-.heading {
-    text-align: center;
-    font-size: 25px;
-    font-family: "Gilmer Bold";
-    padding-bottom: 6%;
+@media only screen and (max-device-width: 480px) {
+    .self-assessment-cards{
+        flex-direction: column;
+        margin-top: -25%;
+    }
+    .assessment-card{
+        margin: 0%;
+        margin-bottom: 10%;
+        width: 90%;
+    }
+    .assessment-card:hover{
+    
+    }
+    .assessment-card > .heading{
+    
+    }
+    .assessment-card > .text-content{
+    
+    }
+    .assessment-card > .button{
+        
+    }
 }
-.report-text-content {
-    text-align: center;
-}
-.button {
-    margin: auto;
-    border-radius: 17px;
-    height: 7vh;
-    font-size: 3vh;
-    width: 60%;
-    align-content: center;
-    text-align: center;   
-    background: black;
-    color: white; 
-}
-
-.button-category {
-    margin: auto;
-    border-radius: 17px;
-    height: 7vh;
-    font-size: 3vh;
-    width: 60%;
-    align-content: center;
-    text-align: center;   
-    color: white; 
-} */
