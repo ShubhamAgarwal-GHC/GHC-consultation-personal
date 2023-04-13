@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { CATEGORIES_FOR_ASSESSMENT } from "../Constants/Consultation";
 import CONSTANT from "../Constants/constant.json";
 import { Context } from "./Store";
+import categoryContinueArrow from "../Images/category-continue-arrow.png";
 
 import "../Css/Category.css";
 
 const Category = () => {
-  const [selectedCategory, setSelectedCategory] = useState(0);
   const [consultDataState, setConsultDataState] = useContext(Context);
   const navigate = useNavigate();
   const location = useLocation();
@@ -15,23 +15,8 @@ const Category = () => {
   const ASSESSMENT_TYPE = location.state.cardType.toUpperCase();
   const CATEGORIES = CATEGORIES_FOR_ASSESSMENT[BRAND][ASSESSMENT_TYPE];
 
-  useEffect(() => {
-    console.log('selectedCategory:', selectedCategory);
-    setConsultDataState((previousState) => {
-      return {
-        ...previousState,
-        user_survey : []
-      }
-    })
-  }, [selectedCategory]);
-
-
   const handleClick = (index) => {
-    setSelectedCategory(index);
-  };
-
-  const handleContinue = () => {
-    const category = CATEGORIES[selectedCategory].toUpperCase();
+    const category = CATEGORIES[index].toUpperCase();
     setConsultDataState((prevState) => {
       prevState.category = category;
       return prevState;
@@ -44,30 +29,30 @@ const Category = () => {
         assessmentType: ASSESSMENT_TYPE,
       },
     });
-  }
+  };
 
   return (
-    <>
-      <div className="category-heading">{CONSTANT.SELECT_CATEGORY}</div>
+    <div className="category">
+      <div className="category-heading">
+        <h1>{CONSTANT.SELECT_CATEGORY}</h1>
+      </div>
       <div className="category-container">
         <div className="cateorgy-lists">
           {CATEGORIES.map((category, index) => {
             return (
-              <li
-              className={selectedCategory === index ? 'selected' : ''}
-                key={index}
-                onClick={() => handleClick(index)}
-              >
-                {category}
-              </li>
+              <div key={index} className="cateorgy-lists-item" onClick={() => handleClick(index)}>
+                <li>
+                  {category}
+                </li>
+                <div className="categoryContinueArrow">
+                  <img src={categoryContinueArrow} alt="" />
+                </div>
+              </div>
             );
           })}
         </div>
       </div>
-      <div className="button-category">
-      <button className="btn" onClick={() => handleContinue()}>Continue</button>
-      </div>
-    </>
+    </div>
   );
 };
 
