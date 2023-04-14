@@ -59,7 +59,7 @@ const Type1 = ({
       </div>
       {multipleSelectAllowed && (
         <div className="type1-button">
-          <button onClick={ () => handleNextPage()}>Continue</button>
+          <button onClick={ () => handleNextPage()}>{CONSTANT.Proceed}</button>
         </div>
       )}
     </div>

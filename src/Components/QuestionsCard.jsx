@@ -116,7 +116,7 @@ const QuestionsCard = () => {
         optionSelected = {optionSelected}
         multipleSelectAllowed = {QUESTIONS_ARRAY[currentPageIndex].multipleSelectAllowed}
         isProgressBarRequired = {QUESTIONS_OBJECT.isProgressBarRequired}
-        percentage = {(currentPageIndex / QUESTIONS_ARRAY.length) * 100}
+        percentage = {((currentPageIndex + 1) / QUESTIONS_ARRAY.length) * 100}
         handleNextPage = {handleNextPage}
       />
 

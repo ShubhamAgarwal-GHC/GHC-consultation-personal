@@ -109,7 +109,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "Have you tried hair loss treatments before?", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test-1", obj);
@@ -137,7 +137,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "Which treatments have you tried?", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: true,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test-1", obj);
@@ -186,7 +186,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "How did these treatments go?", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -220,7 +220,7 @@ const QUESTIONS_WITH_OPTIONS = {
             quotes:
               "50% of the male pattern baldness can be attributed due to  hereditary roots.However, hereditary male pattern baldness is treatable by taking early preventive actions", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -254,7 +254,7 @@ const QUESTIONS_WITH_OPTIONS = {
             quotes:
               "FACT: Every time we try a new medication it takes time for our body to react. Similarly, we can observe minimal hair loss when we start to use minoxidil for a few days", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -283,7 +283,7 @@ const QUESTIONS_WITH_OPTIONS = {
               "Our doctors need a photo of your scalp selfie photo descriptive image for how to take photo", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -311,7 +311,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "What problems are you facing?", //req
             quotes: "",
             quotesDelay: "", //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: true,
             // Refer NOTE-1
             skipToQuestion: (obj) => {
@@ -350,7 +350,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "In the last 3 months, how often were you able to get an erection during sexual activity?", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test-1", obj);
@@ -397,7 +397,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "In the last 3 months, how often were you able to sustain the erection till ejaculation?", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test-2", obj);
@@ -435,7 +435,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "What concerns are you experiencing with respect to ejaculation? Ejaculation - when one orgasms or climaxes and semen is released from the penis.", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test-3", obj);
@@ -474,7 +474,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "How often do you have trouble getting or keeping an erection during sex?", //req
             quotes: "40% of men experience symptoms like this by the age of 40", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -512,7 +512,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "How long were you able to last during sex in the last 3 months?", //req
             quotes: "30-40% of the men experience this at some point in their lives Understanding more about your condition helps us suggest the best-suited plan for you",
             quotesDelay: 300, //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -551,7 +551,7 @@ const QUESTIONS_WITH_OPTIONS = {
               "Have you been diagnosed with any of the following illness or disorders?", //req
             quotes: "Knowing your physical strength during intercourse helps us navigate to the right treatment for you", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: true,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -601,7 +601,7 @@ const QUESTIONS_WITH_OPTIONS = {
               "Do you consume any of the following?", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -636,7 +636,7 @@ const QUESTIONS_WITH_OPTIONS = {
             question: "Do you experience cramps or tiredness while having sex?", //req
             quotes: "", //req
             quotesDelay: "", //req
-            defaultOptionIndex: 0, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
               console.log("skipToQuestion test", obj);
@@ -670,7 +670,7 @@ const QUESTIONS_WITH_OPTIONS = {
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
                 displayText: "Regrowing your hair",
@@ -703,7 +703,7 @@ const QUESTIONS_WITH_OPTIONS = {
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue2", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
                 displayText: "Regrowing your hair2",
@@ -747,7 +747,7 @@ const QUESTIONS_WITH_OPTIONS = {
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1,
+            defaultOptionIndex: "",
             options: [
               {
                 displayText: "Regrowing your hair",
@@ -781,7 +781,7 @@ const QUESTIONS_WITH_OPTIONS = {
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue2", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
                 displayText: "Regrowing your hair2",
@@ -815,7 +815,7 @@ const QUESTIONS_WITH_OPTIONS = {
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue2", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
                 displayText: "Regrowing your hair2",
@@ -849,7 +849,7 @@ const QUESTIONS_WITH_OPTIONS = {
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue2", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
                 displayText: "Regrowing your hair2",
@@ -883,7 +883,7 @@ const QUESTIONS_WITH_OPTIONS = {
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue2", //req
             quotesDelay: 300, //req
-            defaultOptionIndex: 1, // -1 if no deafult req
+            defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
                 displayText: "Regrowing your hair2",

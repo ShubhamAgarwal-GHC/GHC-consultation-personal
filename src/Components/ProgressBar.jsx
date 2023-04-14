@@ -6,7 +6,7 @@ const ProgressBarGHC = ({percentage}) => {
   return (
     <ProgressBar
       percent={percentage}
-      filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+      filledBackground="linear-gradient(to right, #FFFFFF, #000000)"
     >
     </ProgressBar>
   );

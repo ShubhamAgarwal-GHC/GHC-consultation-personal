@@ -1,88 +1,87 @@
-import React, { useState, useContext } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Context } from "./Store"
+import React, { useState } from "react";
+import CONSTANT from "../Constants/constant.json";
+import "../Css/ContactForm.css"
 
 function ContactForm() {
-  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+  });
 
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [firstNameError, setFirstNameError] = useState('');
-  const [lastNameError, setLastNameError] = useState('');
-  const [phoneError, setPhoneError] = useState('');
-  const [consultDataState, setConsultDataState] = useContext(Context);
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (validateName() && validatePhone()) {
-      console.log(`Submitting form with name: ${firstName} ${lastName} and phone: ${phone}`);
-
-      setConsultDataState((prevState) => {
-        prevState.firstName = firstName;
-        prevState.lastName = lastName;
-        prevState.phone = phone;
-        return prevState;
-      });
-      setFirstName("");
-      setLastName("");
-      setPhone("");
-      console.log("ContactForm", consultDataState);
-      navigate("/recommendProduct", { state: { } });
-
+    if (validateForm()) {
+      console.log(formData);
+      // You can replace the console.log with a function that sends the data to a server
     }
   };
 
-  const validateName = () => {
-    if (!firstName) {
-      setFirstNameError('First name is required');
-      return false;
+  const validateForm = () => {
+    let errors = {};
+    let isValid = true;
+
+    if (!formData.name) {
+      isValid = false;
+      errors["name"] = "Please enter your name.";
     }
 
-    if (!lastName) {
-      setLastNameError('Last name is required');
-      return false;
+    if (!formData.phone) {
+      isValid = false;
+      errors["phone"] = "Please enter your phone number.";
+    } else if (!/^\d{10}$/i.test(formData.phone)) {
+      isValid = false;
+      errors["phone"] = "Please enter a valid phone number.";
     }
-    setFirstNameError('');
-    setLastNameError('');
-      return true;
-  };
 
-  const validatePhone = () => {
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!phone) {
-      setPhoneError('Phone number is required');
-      return false;
-    } else if (!phoneRegex.test(phone)) {
-      setPhoneError('Invalid phone number');
-      return false;
-    } else {
-      setPhoneError('');
-      return true;
-    }
+    setErrors(errors);
+    return isValid;
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        FirstName:
-        <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-        {firstNameError && <span style={{ color: 'red' }}>{firstNameError}</span>}
-      </label>
-      <label>
-        LastName:
-        <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-        {lastNameError && <span style={{ color: 'red' }}>{lastNameError}</span>}
-      </label>
-      <br />
-      <label>
-        Phone:
-        <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
-        {phoneError && <span style={{ color: 'red' }}>{phoneError}</span>}
-      </label>
-      <br />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <div className="fillUpTheDetails">
+          <h1>{CONSTANT.FillUpTheDetailsBelow}</h1>
+        </div>
+        <div className="name">
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+            {errors.name && <span className="error">{errors.name}</span>}
+          </label>
+        </div>
+        <div className="phone">
+          <label>
+            Phone Number:
+            <input
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+            />
+            {errors.phone && <span className="error">{errors.phone}</span>}
+          </label>
+        </div>
+        <div className="submit">
+          <button type="submit">{CONSTANT.Proceed}</button>
+        </div>
+      </form>
+    </div>
   );
 }
 
