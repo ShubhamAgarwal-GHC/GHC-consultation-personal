@@ -38,9 +38,19 @@ function ContactForm() {
       });
       console.log("ContactForm", consultDataState);
 
-      navigate("/questions", {
-        state: location.state,
-      });
+      if(consultDataState["consultation_type"] === "short") {
+        navigate("/questions", {
+          state: location.state,
+        });
+      } else{
+        navigate("/freeConsultation", {
+          state: location.state,
+        });
+      }
+
+
+
+
       
     }
   };

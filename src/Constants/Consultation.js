@@ -59,18 +59,18 @@ const QUESTIONS_WITH_OPTIONS = {
   MARS: {
     SHORT: {
       HAIR: {
-        recommandTagLine : ["Based on your Hair analysis","This routine will help you transform your hair to the healthiest"],
+        recommandTagLine : "Based on your Hair analysis,   this routine will help you transform your hair to the healthiest",
         isProgressBarRequired: true,
         questions: [
           {
             questionId: 0,
+            skipQuestionReq : false,
             nextQuestionid: 1,
             previousQuestionId: -1, // req -> -1 if its the first question
             optionType: "Type1",
             question: "What best describes the current condition of your hair?", //req
-            quotes:
-              "Hair loss affects 60.5 % of the total Men population in India", //req
-            quotesDelay: 300, //req
+            quotes: "Hair loss affects 60.5 % of the total Men population in India", //req
+            quotesDelay: 3000, //req
             defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             // Refer NOTE-1
@@ -104,12 +104,13 @@ const QUESTIONS_WITH_OPTIONS = {
 
           {
             questionId: 1,
+            skipQuestionReq : false,
             nextQuestionid: 2,
             previousQuestionId: 0, // req -> -1 if its the first question
             optionType: "Type1",
             question: "Have you tried hair loss treatments before?", //req
-            quotes: "", //req
-            quotesDelay: "", //req
+            quotes: "Sample quotes........................................................................", //req
+            quotesDelay: 3000, //req
             defaultOptionIndex: "", // -1 if no deafult req
             multipleSelectAllowed: false,
             skipToQuestion: (obj) => {
@@ -132,6 +133,7 @@ const QUESTIONS_WITH_OPTIONS = {
 
           {
             questionId: 2,
+            skipQuestionReq : true,
             nextQuestionid: 3,
             previousQuestionId: 1, // req -> -1 if its the first question
             optionType: "Type1",
@@ -181,6 +183,7 @@ const QUESTIONS_WITH_OPTIONS = {
 
           {
             questionId: 3,
+            skipQuestionReq : false,
             nextQuestionid: 4,
             previousQuestionId: 2, // req -> -1 if its the first question
             optionType: "Type1",
@@ -214,6 +217,7 @@ const QUESTIONS_WITH_OPTIONS = {
 
           {
             questionId: 4,
+            skipQuestionReq : false,
             nextQuestionid: 5,
             previousQuestionId: 3, // req -> -1 if its the first question
             optionType: "Type1",
@@ -248,6 +252,7 @@ const QUESTIONS_WITH_OPTIONS = {
 
           {
             questionId: 5,
+            skipQuestionReq : false,
             nextQuestionid: 6,
             previousQuestionId: 4, // req -> -1 if its the first question
             optionType: "Type1",
@@ -277,6 +282,7 @@ const QUESTIONS_WITH_OPTIONS = {
 
           {
             questionId: 6,
+            skipQuestionReq : false,
             nextQuestionid: -1, // req -> no more question
             previousQuestionId: 5, // req -> -1 if its the first question
             optionType: "Type1",
@@ -302,11 +308,12 @@ const QUESTIONS_WITH_OPTIONS = {
         ],
       },
       PERFORMANCE: {
-        recommandTagLine : ["Based on your Hair analysis","This routine will help you transform your hair to the healthiest"],
+        recommandTagLine : "Based on your Hair analysis,this routine will help you transform your hair to the healthiest",
         isProgressBarRequired: true,
         questions: [
           {
             questionId: 0,
+            skipQuestionReq : false,
             nextQuestionid: 1,
             previousQuestionId: -1, // req -> -1 if its the first question
             optionType: "Type1",
@@ -346,6 +353,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 1,
+            skipQuestionReq : true,
             nextQuestionid: 2,
             previousQuestionId: 0, // req -> -1 if its the first question
             optionType: "Type1",
@@ -393,6 +401,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 2,
+            skipQuestionReq : false,
             nextQuestionid: 3,
             previousQuestionId: 1, // req -> -1 if its the first question
             optionType: "Type1",
@@ -431,6 +440,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 3,
+            skipQuestionReq : true,
             nextQuestionid: 4,
             previousQuestionId: 2, // req -> -1 if its the first question
             optionType: "Type1",
@@ -470,6 +480,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 4,
+            skipQuestionReq : false,
             nextQuestionid: 5,
             previousQuestionId: 3, // req -> -1 if its the first question
             optionType: "Type1",
@@ -508,6 +519,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 5,
+            skipQuestionReq : false,
             nextQuestionid: 6,
             previousQuestionId: 4, // req -> -1 if its the first question
             optionType: "Type1",
@@ -546,6 +558,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 6,
+            skipQuestionReq : false,
             nextQuestionid: -1, // req -> no more question
             previousQuestionId: 5, // req -> -1 if its the first question
             optionType: "Type1",
@@ -596,6 +609,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 7,
+            skipQuestionReq : false,
             nextQuestionid: 8, // req -> no more question
             previousQuestionId: 6, // req -> -1 if its the first question
             optionType: "Type1",
@@ -632,6 +646,7 @@ const QUESTIONS_WITH_OPTIONS = {
       
           {
             questionId: 8,
+            skipQuestionReq : false,
             nextQuestionid: -1, // req -> no more question
             previousQuestionId: 7, // req -> -1 if its the first question
             optionType: "Type1",
@@ -661,18 +676,19 @@ const QUESTIONS_WITH_OPTIONS = {
         ],
       },
       SKIN: {
-        recommandTagLine : ["Based on your Hair analysis","This routine will help you transform your hair to the healthiest"],
+        recommandTagLine : "Based on your Hair analysis,this routine will help you transform your hair to the healthiest",
         isProgressBarRequired: true,
         questions: [
           {
             questionId: 0,
+            skipQuestionReq : false,
             optionType: "Type1",
             question: "whats best descrribe the condition of your hair?", //req
             previousQuestionId: -1, // req -> -1 if its the first question
             nextQuestionid: 1,
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue", //req
-            quotesDelay: 300, //req
+            quotesDelay: 3000, //req
             defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
@@ -699,13 +715,14 @@ const QUESTIONS_WITH_OPTIONS = {
           },
           {
             questionId: 1,
+            skipQuestionReq : false,
             optionType: "imageTextVertical",
             question: "Whats best descrribe the condition of your hair2?", //req
             previousQuestionId: 0, // req -> -1 if its the first question
             nextQuestionid: 2,
             type: "radio", // radio, checkbox, input, textarea
             quotes: "30% people suffer this issue2", //req
-            quotesDelay: 300, //req
+            quotesDelay: 3000, //req
             defaultOptionIndex: "", // -1 if no deafult req
             options: [
               {
@@ -733,198 +750,11 @@ const QUESTIONS_WITH_OPTIONS = {
         ],
       },
       WELLNESS: {},
-      BEARD: {},
-    },
-    LONG: {
-      SKIN: {
-        isProgressBarRequired: true,
-        progressBarItems: ["Basic", "Life Style", "Health"],
-        questions: [
-          {
-            questionId: 0,
-            belongsToProgressBarItem: "Basic",
-            optionType: "Type1",
-            question: "whats best descrribe the condition of your hair?", //req
-            previousQuestionId: -1, // req -> -1 if its the first question
-            nextQuestionid: 1,
-            type: "radio", // radio, checkbox, input, textarea
-            quotes: "30% people suffer this issue", //req
-            quotesDelay: 300, //req
-            defaultOptionIndex: "",
-            options: [
-              {
-                displayText: "Regrowing your hair",
-                value: "hair_regrowth",
-                image: "",
-              },
-              {
-                displayText: "hair fall",
-                optionType: "checkbox",
-                image: "",
-              },
-              {
-                displayText: "hair thining",
-                optionType: "textbox",
-                image: "",
-              },
-              {
-                displayText: "hair thining",
-                optionType: "textbox",
-                image: "",
-              },
-            ],
-          },
-          {
-            questionId: 1,
-            belongsToProgressBarItem: "Basic",
-            optionType: "imageTextVertical",
-            question: "Whats best descrribe the condition of your hair2?", //req
-            previousQuestionId: 0, // req -> -1 if its the first question
-            nextQuestionid: 2,
-            type: "radio", // radio, checkbox, input, textarea
-            quotes: "30% people suffer this issue2", //req
-            quotesDelay: 300, //req
-            defaultOptionIndex: "", // -1 if no deafult req
-            options: [
-              {
-                displayText: "Regrowing your hair2",
-                value: "hair_regrowth2",
-                image: "",
-              },
-              {
-                displayText: "hair fall2",
-                optionType: "checkbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining2",
-                optionType: "textbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining",
-                optionType: "textbox",
-                image: "",
-              },
-            ],
-          },
-          {
-            questionId: 2,
-            belongsToProgressBarItem: "Life Style",
-            optionType: "imageTextVertical",
-            question: "Whats best descrribe the condition of your hair2?", //req
-            previousQuestionId: 1, // req -> -1 if its the first question
-            nextQuestionid: 3,
-            type: "radio", // radio, checkbox, input, textarea
-            quotes: "30% people suffer this issue2", //req
-            quotesDelay: 300, //req
-            defaultOptionIndex: "", // -1 if no deafult req
-            options: [
-              {
-                displayText: "Regrowing your hair2",
-                value: "hair_regrowth2",
-                image: "",
-              },
-              {
-                displayText: "hair fall2",
-                optionType: "checkbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining2",
-                optionType: "textbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining",
-                optionType: "textbox",
-                image: "",
-              },
-            ],
-          },
-          {
-            questionId: 3,
-            belongsToProgressBarItem: "Health",
-            optionType: "imageTextVertical",
-            question: "Whats best descrribe the condition of your hair2?", //req
-            previousQuestionId: 2, // req -> -1 if its the first question
-            nextQuestionid: 4,
-            type: "radio", // radio, checkbox, input, textarea
-            quotes: "30% people suffer this issue2", //req
-            quotesDelay: 300, //req
-            defaultOptionIndex: "", // -1 if no deafult req
-            options: [
-              {
-                displayText: "Regrowing your hair2",
-                value: "hair_regrowth2",
-                image: "",
-              },
-              {
-                displayText: "hair fall2",
-                optionType: "checkbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining2",
-                optionType: "textbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining",
-                optionType: "textbox",
-                image: "",
-              },
-            ],
-          },
-          {
-            questionId: 4,
-            belongsToProgressBarItem: "Health",
-            optionType: "imageTextVertical",
-            question: "Whats best descrribe the condition of your hair2?", //req
-            previousQuestionId: 3, // req -> -1 if its the first question
-            nextQuestionid: -1, // req -1 if no more questions is there
-            type: "radio", // radio, checkbox, input, textarea
-            quotes: "30% people suffer this issue2", //req
-            quotesDelay: 300, //req
-            defaultOptionIndex: "", // -1 if no deafult req
-            options: [
-              {
-                displayText: "Regrowing your hair2",
-                value: "hair_regrowth2",
-                image: "",
-              },
-              {
-                displayText: "hair fall2",
-                optionType: "checkbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining2",
-                optionType: "textbox2",
-                image: "",
-              },
-              {
-                displayText: "hair thining",
-                optionType: "textbox",
-                image: "",
-              },
-            ],
-          },
-        ],
-      },
-      WELLNESS: {},
-      HAIR: {},
-      PERFORMANCE: {},
       BEARD: {},
     },
   },
   SATURN: {
     SHORT: {
-      SKIN: {},
-      WELLNESS: {},
-      HAIR: {},
-    },
-    LONG: {
       SKIN: {},
       WELLNESS: {},
       HAIR: {},

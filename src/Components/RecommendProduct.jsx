@@ -74,14 +74,7 @@ const RecommendProduct = () => {
   return (
     <div className="recommend">
       <div className="tagline">
-
-        {tagLines.map((tagline,index) => {
-          return(
-            <h1 className={`tagline-${index}`}>{tagline}</h1>
-          )
-        })}
-
-        
+        <h1 className="tagline">{tagLines}</h1>        
       </div>
       <div className="products">
         {shopifyProducts.map((product) => {

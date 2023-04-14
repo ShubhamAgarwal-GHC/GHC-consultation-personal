@@ -5,12 +5,14 @@ import {
   OPTIONS_COMPONENT,
 } from "../Constants/Consultation";
 import { Context } from "./Store";
+import "../Css/QuestionsCard.css"
 
 const QuestionsCard = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const [currentPageIndex, setCurrentPageIndex] = useState(0); //keep track of current question 
+  const [display, setDisplay] = useState(true);
 
   const { brand, assessmentType, categoryType } = location.state;
   const QUESTIONS_OBJECT = QUESTIONS_WITH_OPTIONS[brand][assessmentType][categoryType];
@@ -29,11 +31,23 @@ const QuestionsCard = () => {
   //   setStepsDetails(details); // Update the state with the retrieved data
   // }, []);
 
-  const currentPageIndexValue = QUESTIONS_ARRAY[currentPageIndex].skipToQuestion(optionSelectedObj);
+  let currentPageIndexValue = currentPageIndex;
+  if(QUESTIONS_ARRAY[currentPageIndex]["skipQuestionReq"]) {
+    currentPageIndexValue = QUESTIONS_ARRAY[currentPageIndex].skipToQuestion(optionSelectedObj);
+  }
+  
+  const quotes = QUESTIONS_ARRAY[currentPageIndexValue]["quotes"];
+  const quotesDisplayTime = QUESTIONS_ARRAY[currentPageIndexValue]["quotesDelay"];
 
   useEffect(() => {
-    setCurrentPageIndex(currentPageIndexValue)
-  }, [optionSelectedObj,currentPageIndexValue]);
+    const timerId = setTimeout(() => {
+      setDisplay(false);
+    }, quotesDisplayTime);
+    setDisplay(true);
+    setCurrentPageIndex(currentPageIndexValue);
+
+    return () => clearTimeout(timerId);
+  }, [optionSelectedObj,currentPageIndexValue,quotesDisplayTime]);
 
   const handleNextPage = () => {
 
@@ -108,6 +122,8 @@ const QuestionsCard = () => {
 
   return (
     <div>
+      {display && <div className="quotes">{quotes}</div>}
+      {!display &&
       <OptionComponentToRender
         question={QUESTIONS_ARRAY[currentPageIndex].question}
         OPTIONS={QUESTIONS_ARRAY[currentPageIndex].options}
@@ -117,7 +133,7 @@ const QuestionsCard = () => {
         isProgressBarRequired = {QUESTIONS_OBJECT.isProgressBarRequired}
         percentage = {((currentPageIndex + 1) / QUESTIONS_ARRAY.length) * 100}
         handleNextPage = {handleNextPage}
-      />
+      />}
 
       {/* <button onClick={handlePreviousPage} disabled={currentPageIndex === 0}>
         Previous
