@@ -1,0 +1,72 @@
+body{
+    background: #E5E5E5;
+}
+.freeConsultation {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    margin-left: 30%;
+}
+
+.freeConsultation>.heading {
+    /* border: 2px solid red; */
+    width: 302px;
+    height: 52px;
+    margin-top: 176px;
+    margin-bottom: 3%;
+}
+
+.freeConsultation>.heading>h1 {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+}
+
+.freeConsultation>.subHeading {
+    /* border: 2px solid black; */
+}
+
+.freeConsultation>.subHeading>li {
+    width: 327px;
+    height: 35px;
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+    list-style: none;
+}
+
+.freeConsultation>button {
+    width: 210px;
+    height: 44px;
+    background: #333333;
+    border-radius: 10px;
+    font-family: 'Futura Hv BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-top: 6%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .freeConsultation{
+        margin: auto;
+        width: 80vw;
+    }
+    .freeConsultation>button{
+        margin-left: 50px;
+        margin-top: 20%;
+    }
+}

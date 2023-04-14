@@ -1,11 +1,20 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import CONSTANT from '../Constants/constant.json'
 import { Context } from "./Store";
 import "../Css/BookingSelectionPage.css"
 
 const BookingSelectionPage = () => {
   const [consultDataState, setConsultDataState] = useContext(Context); // this is the global object which stores all the info
+  const navigate = useNavigate();
   console.log("setConsultDataState",setConsultDataState);
+
+  const handleFreeConsultation = () => {
+    navigate("/freeConsultation", {
+        state: {},
+      });
+  }
+
   return (
     <div className="bookingSelectionPage">
       <div className="heading">
@@ -16,7 +25,7 @@ const BookingSelectionPage = () => {
       </div>
       <div className="chooseOption">
         <div className="bookACall">
-          <button>{CONSTANT.BookFREEConsultation}</button>
+          <button onClick={() => handleFreeConsultation()}>{CONSTANT.BookFREEConsultation}</button>
         </div>
         <div className="recommend">
           <button>{CONSTANT.GoWithRecommendedProducts}</button>

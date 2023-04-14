@@ -10,6 +10,7 @@ import Category from "./Category";
 import QuestionsCard from "./QuestionsCard";
 import RecommentProduct from "./RecommendProduct";
 import BookingSelectionPage from "./BookingSelectionPage";
+import FreeConsultation from "./FreeConsultation";
 
 
 import ContactForm from "./ContactForm"
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contactForm" element={<ContactForm />}></Route>
             <Route path="/recommendProduct" element={<RecommentProduct />}></Route>
             <Route path="/bookingSelectionPage" element={<BookingSelectionPage />}></Route>
+            <Route path="/freeConsultation" element={<FreeConsultation />}></Route>
           </Routes>
         </Store>
       </div>

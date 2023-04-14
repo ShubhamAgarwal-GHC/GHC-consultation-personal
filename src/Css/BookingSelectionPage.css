@@ -82,6 +82,14 @@
     background: #FFFFFF;
 }
 
+.bookACall>button:hover{
+    cursor: pointer;
+}
+
+.recommend>button:hover{
+    cursor: pointer;
+}
+
 @media only screen and (max-device-width: 480px){
     .bookingSelectionPage>.heading {
         margin-bottom: -220px;
