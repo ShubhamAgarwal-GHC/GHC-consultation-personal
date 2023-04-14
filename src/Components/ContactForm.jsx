@@ -41,7 +41,7 @@ function ContactForm() {
     } else if (!/^\d{10}$/i.test(formData.phone)) {
       isValid = false;
       errors["phone"] = "Please enter a valid phone number.";
-    }
+    } 
 
     setErrors(errors);
     return isValid;
@@ -55,7 +55,7 @@ function ContactForm() {
         </div>
         <div className="name">
           <label>
-            Name:
+            Name
             <input
               type="text"
               name="name"
@@ -67,7 +67,7 @@ function ContactForm() {
         </div>
         <div className="phone">
           <label>
-            Phone Number:
+            Phone Number
             <input
               type="text"
               name="phone"
