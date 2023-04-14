@@ -1,0 +1,97 @@
+.recommend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommend>.tagline {
+
+    margin-top: 3%;
+}
+
+.tagline>h1 {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+    width: 577px;
+    height: 58px;
+}
+
+.recommend>.products {
+    display: flex;
+}
+
+.products>.product {
+    /* border: 2px solid red; */
+    height: 70vh;
+    padding: 2%;
+    margin: 2%;
+    background: white;
+    border-radius: 11px 11px 0px 0px;
+}
+
+.product>img {
+    height: 300px;
+    width: 100%;
+
+}
+
+.product>.title {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #1D070F;
+    margin-bottom: 5%;
+}
+
+.product>.price {
+    display: flex;
+}
+
+.price>.discounted {
+    width: 40%;
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 80.5%;
+    text-transform: capitalize;
+}
+
+.price>.actual {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 80.5%;
+    text-transform: capitalize;
+    text-decoration: line-through;
+    display: flex;
+    align-items: flex-end;
+}
+
+.product > button{
+    width: 200px;
+    height: 45px;
+    font-family: 'Futura Hv BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background: #333333;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+}

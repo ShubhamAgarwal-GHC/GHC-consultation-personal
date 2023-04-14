@@ -59,6 +59,7 @@ const QUESTIONS_WITH_OPTIONS = {
   MARS: {
     SHORT: {
       HAIR: {
+        recommandTagLine : ["Based on your Hair analysis","This routine will help you transform your hair to the healthiest"],
         isProgressBarRequired: true,
         questions: [
           {
@@ -301,6 +302,7 @@ const QUESTIONS_WITH_OPTIONS = {
         ],
       },
       PERFORMANCE: {
+        recommandTagLine : ["Based on your Hair analysis","This routine will help you transform your hair to the healthiest"],
         isProgressBarRequired: true,
         questions: [
           {
@@ -659,6 +661,7 @@ const QUESTIONS_WITH_OPTIONS = {
         ],
       },
       SKIN: {
+        recommandTagLine : ["Based on your Hair analysis","This routine will help you transform your hair to the healthiest"],
         isProgressBarRequired: true,
         questions: [
           {

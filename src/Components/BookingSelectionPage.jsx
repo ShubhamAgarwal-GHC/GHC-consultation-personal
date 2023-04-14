@@ -15,6 +15,12 @@ const BookingSelectionPage = () => {
       });
   }
 
+  const handleRecommendadtion = () => {
+    navigate("/recommendProduct", {
+      state: {},
+    });
+  }
+
   return (
     <div className="bookingSelectionPage">
       <div className="heading">
@@ -28,7 +34,7 @@ const BookingSelectionPage = () => {
           <button onClick={() => handleFreeConsultation()}>{CONSTANT.BookFREEConsultation}</button>
         </div>
         <div className="recommend">
-          <button>{CONSTANT.GoWithRecommendedProducts}</button>
+          <button onClick={() => handleRecommendadtion()}>{CONSTANT.GoWithRecommendedProducts}</button>
         </div>
       </div>
     </div>

@@ -1,19 +1,23 @@
 import React, { useEffect, useState, useCallback, useContext } from "react";
 import { Context } from "./Store";
 import { getShopifyProducts } from "../CommanApis/Shopify";
-import CONSTANT from "../Constants/constant.json";
+import { QUESTIONS_WITH_OPTIONS } from "../Constants/Consultation";
+import "../Css/RecommendProduct.css"
 
-// will get it from global state
+// need to check for the naming convension from lava
 const category = "hair-1";
-
-
 
 const RecommendProduct = () => {
   const [consultDataState, setConsultDataState] = useContext(Context);
   const [shopifyProducts, setShopifyProducts] = useState([]);
 
-  console.log("setConsultDataState",setConsultDataState);
+  const handleBuyNow = (newPageUrl) => {
+    window.open(newPageUrl, "_blank") //to open new page
+  }
 
+  console.log("setConsultDataState", setConsultDataState);
+
+  // need to talk to lava/ analyse code and update this function (imp)
   const getProuctInfo = (product) => {
     let productInfo = {};
     productInfo.title = product.title;
@@ -24,11 +28,20 @@ const RecommendProduct = () => {
       consultDataState["consultation_type"] === "30 sec"
         ? "utm_source=website-consultation&utm_medium=short-consultation&utm_campaign=recommended-product"
         : "utm_source=website-consultation&utm_medium=long-consultation&utm_campaign=highly-recommended-product";
-    const product_link_temp = `${variant_id_1}:1?checkout[shipping_address][first_name]=${consultDataState["firstName"].trim().replace(/\s/g, "+")}&checkout[shipping_address][phone]=${consultDataState["phone"].trim().replace(/\s/g, "")}&${utm_tag}`;
-    productInfo.image = product["images"][0]["src"];;
+    const product_link_temp = `${variant_id_1}:1?checkout[shipping_address][first_name]=${consultDataState[
+      "firstName"
+    ]
+      .trim()
+      .replace(
+        /\s/g,
+        "+"
+      )}&checkout[shipping_address][phone]=${consultDataState["phone"]
+      .trim()
+      .replace(/\s/g, "")}&${utm_tag}`;
+    productInfo.image = product["images"][0]["src"];
     productInfo.checkout = "https://ghc.health/cart/" + product_link_temp;
 
-    console.log('consultDataState["phone"]',consultDataState.phone)
+    console.log('consultDataState["phone"]', consultDataState.phone);
     return productInfo;
   };
 
@@ -42,33 +55,50 @@ const RecommendProduct = () => {
   }, [fetchData]);
 
   console.log("shopifyProducts", shopifyProducts);
+  const brand = consultDataState["type"].toUpperCase();
+
+  //need to delete first and un-comment second
+  const productCategory = "PERFORMANCE";
+  // const productCategory = consultDataState["category"]
+
+  //need to delete first and un-comment second
+  const consultation_type = "SHORT";
+  // const consultation_type = consultDataState["consultation_type"].toUpperCase();
+
+  const tagLines =
+    QUESTIONS_WITH_OPTIONS[brand][consultation_type][productCategory][
+      "recommandTagLine"
+    ];
+
+    console.log("tagLines",tagLines);
   return (
-    <div>
-      {/* <div>RecommendProduct</div> */}
-      <div>{CONSTANT.WE_RECOMMEND_ONLY_THE_BEST}</div>
+    <div className="recommend">
+      <div className="tagline">
 
+        {tagLines.map((tagline,index) => {
+          return(
+            <h1 className={`tagline-${index}`}>{tagline}</h1>
+          )
+        })}
 
-      {shopifyProducts.map((product,index) => {
-        const productInfo = getProuctInfo(product);
-        return (
-          <div key={index}>
-            <p>Title--- {productInfo.title}</p>
-            <p>Discounted price----- {productInfo.discountedPrice}</p>
-            <p>
-              Actual price------ {productInfo.actualPrice}
-            </p>
-            <p>product Image----- {productInfo.image}</p>
-            <p>checkout url ----- {productInfo.checkout}</p>
-            {/* <img className="image" src={productInfo.image} alt="" /> */}
-            <br />
-            <br />
-            <br />
-          </div>
-        );
-      })}
-
-
-      
+        
+      </div>
+      <div className="products">
+        {shopifyProducts.map((product) => {
+          const productInfo = getProuctInfo(product);
+          return (
+            <div className="product">
+              <img src={productInfo.image} alt="" />
+              <p className="title">{productInfo.title}</p>
+              <div className="price">
+                <p className="discounted">Rs. {productInfo.discountedPrice}</p>
+                <p className="actual">Rs. {productInfo.actualPrice}</p>
+              </div>
+              <button onClick={() => handleBuyNow(productInfo.checkout)}>Buy Now</button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
