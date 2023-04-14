@@ -8,7 +8,8 @@ import Store from "./Store";
 import LandingPage from "./LandingPage";
 import Category from "./Category";
 import QuestionsCard from "./QuestionsCard";
-import RecommentProduct from "./RecommendProduct"
+import RecommentProduct from "./RecommendProduct";
+import BookingSelectionPage from "./BookingSelectionPage";
 
 
 import ContactForm from "./ContactForm"
@@ -23,6 +24,7 @@ function App() {
             <Route path="/questions" element={<QuestionsCard />}></Route>
             <Route path="/contactForm" element={<ContactForm />}></Route>
             <Route path="/recommendProduct" element={<RecommentProduct />}></Route>
+            <Route path="/bookingSelectionPage" element={<BookingSelectionPage />}></Route>
           </Routes>
         </Store>
       </div>

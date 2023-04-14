@@ -1,0 +1,93 @@
+.bookingSelectionPage {
+    display: flex;
+    flex-direction: column;
+    background: #E5E5E5;
+    height: 100vh;
+    justify-content: center;
+}
+
+.bookingSelectionPage>.heading {
+    display: flex;
+    margin: auto;
+    margin-bottom: -150px;
+}
+
+.bookingSelectionPage>.heading h1 {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    width: 305px;
+    height: 52px;
+
+    color: #333333;
+}
+
+.bookingSelectionPage>.subHeading {
+    display: flex;
+    margin: auto;
+}
+
+.bookingSelectionPage>.subHeading h2 {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    width: 303px;
+    height: 17px;
+    text-align: center;
+
+    color: #333333;
+}
+
+.bookingSelectionPage>.chooseOption {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    margin-top: -10%;
+}
+
+.chooseOption>.bookACall {
+    margin-bottom: 10%;
+}
+
+.chooseOption>.recommend {}
+
+.bookACall>button {
+    width: 300px;
+    height: 44px;
+    font-family: Futura Hv BT;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background: #333333;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.recommend>button {
+    width: 300px;
+    height: 44px;
+    font-family: Futura Hv BT;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    color: #333333;
+    background: #FFFFFF;
+}
+
+@media only screen and (max-device-width: 480px){
+    .bookingSelectionPage>.heading {
+        margin-bottom: -220px;
+    }
+    
+    .bookingSelectionPage>.chooseOption{
+        margin-top: -50%;
+    }
+}

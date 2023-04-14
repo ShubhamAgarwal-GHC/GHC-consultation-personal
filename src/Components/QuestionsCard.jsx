@@ -61,8 +61,7 @@ const QuestionsCard = () => {
       });
       console.log("QuestionsCard", consultDataState);
     } else {
-      // this route will change and will ask for recomdation or booking a call
-      navigate("/recommendProduct", { state: { cardType: "cardType" } });
+      navigate("/bookingSelectionPage", { state: {} });
     }
   };
 
