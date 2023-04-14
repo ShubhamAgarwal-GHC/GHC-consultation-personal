@@ -61,8 +61,8 @@ const QuestionsCard = () => {
       });
       console.log("QuestionsCard", consultDataState);
     } else {
-      // no question left, take user name and phone number as input
-      navigate("/contactForm", { state: { cardType: "cardType" } });
+      // this route will change and will ask for recomdation or booking a call
+      navigate("/recommendProduct", { state: { cardType: "cardType" } });
     }
   };
 

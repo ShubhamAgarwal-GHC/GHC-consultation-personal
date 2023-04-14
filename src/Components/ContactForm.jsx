@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Context } from "./Store";
 import CONSTANT from "../Constants/constant.json";
 import "../Css/ContactForm.css"
 
 function ContactForm() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const [consultDataState, setConsultDataState] = useContext(Context);
+
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -21,8 +29,19 @@ function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
-      console.log(formData);
       // You can replace the console.log with a function that sends the data to a server
+      console.log("formData",formData);
+      setConsultDataState((prevState) => {
+        prevState.firstName = formData.name;
+        prevState.phone = formData.phone;
+        return prevState;
+      });
+      console.log("ContactForm", consultDataState);
+
+      navigate("/questions", {
+        state: location.state,
+      });
+      
     }
   };
 

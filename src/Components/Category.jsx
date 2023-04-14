@@ -22,7 +22,7 @@ const Category = () => {
       return prevState;
     });
     console.log("Category", consultDataState);
-    navigate("/questions", {
+    navigate("/contactForm", {
       state: {
         categoryType: category,
         brand: BRAND,
