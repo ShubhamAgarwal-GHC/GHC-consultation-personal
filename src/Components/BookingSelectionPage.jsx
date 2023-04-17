@@ -5,9 +5,9 @@ import { Context } from "./Store";
 import "../Css/BookingSelectionPage.css"
 
 const BookingSelectionPage = () => {
-  const [consultDataState, setConsultDataState] = useContext(Context); // this is the global object which stores all the info
+  const [consultDataState] = useContext(Context); // this is the global object which stores all the info
   const navigate = useNavigate();
-  console.log("setConsultDataState",setConsultDataState);
+  // console.log("consultDataState",consultDataState);
 
   const handleFreeConsultation = () => {
     navigate("/freeConsultation", {
