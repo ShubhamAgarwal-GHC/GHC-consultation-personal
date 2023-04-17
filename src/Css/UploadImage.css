@@ -1,0 +1,104 @@
+.uploadImage{
+    height: 100vh;
+    box-sizing: border-box;
+}
+.uploadImage-question{
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        box-sizing: border-box;
+        width: 50%;
+        height: 12%;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        font-family: 'Futura Md BT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+        flex-direction: column;
+}
+
+.formData{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formData > .buttons{
+    display: flex;
+    flex-direction: column;
+}
+.uploadImage-banner{
+    /* border: 2px solid gray; */
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 5% 30%;
+    /* width: 40vw;    */
+    
+    width: 40%;
+
+}
+
+.formData-btn {
+    border-radius: 10px;
+}
+
+.data > .heading{
+    /* border: 2px solid; */
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    color: #333333;
+    width: 265px;
+    height: 26px;
+}
+.lisItems{
+    margin-top: 5%;
+}
+.lisItems > li{
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    width: 289px;
+    /* height: 34px; */
+}
+.buttons > button{
+    width: 303px;
+    height: 44px;
+    margin: 2% 0%;
+}
+.formData > .inputFile{
+    width: 200px;
+    height: 44px;
+}
+.uploadImage-banner > .data{
+    /* border: 2px solid yellow; */
+}
+.uploadImage-banner > .image{
+    /* border: 2px solid black; */
+}
+
+@media only screen and (max-device-width: 480px){
+    .uploadImage-banner{
+        margin: 0%;
+        justify-content: normal;
+        flex-direction: column;
+        width: 75vw;
+        padding: 8%;
+        margin: 5%;
+        height: 50vh;
+    }
+    .data > .image{
+        width: 223px;
+        height: 223px;
+    }
+}

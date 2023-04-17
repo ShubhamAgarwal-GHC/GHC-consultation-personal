@@ -1,9 +1,9 @@
 import Type1 from "../Components/Options/Type1";
+import UploadImage from "../Components/Options/UploadImage";
 import along_the_hairline from "../Images/along_the_hairline.png"
 import overall_hairloss from "../Images/overall_hairloss.png"
 import receding_hairline_and_overall_thining from "../Images/receding_hairline_and_overall_thining.png"
 import thining_at_the_crown from "../Images/thining_at_the_crown.png"
-
 
 // import Type1 from "../Components/Options/Type1";
 // import "" from "../Images/"".png";
@@ -52,6 +52,7 @@ const CATEGORIES_FOR_ASSESSMENT = {
 
 const OPTIONS_COMPONENT = {
   Type1: Type1,
+  UploadImage: UploadImage,
 };
 
 // all questions/options number are 0-index based
@@ -285,9 +286,8 @@ const QUESTIONS_WITH_OPTIONS = {
             skipQuestionReq : false,
             nextQuestionid: -1, // req -> no more question
             previousQuestionId: 5, // req -> -1 if its the first question
-            optionType: "Type1",
-            question:
-              "Our doctors need a photo of your scalp selfie photo descriptive image for how to take photo", //req
+            optionType: "UploadImage",
+            question:"Your Hair Expert needs a photo of your Hair to help you better",
             quotes: "", //req
             quotesDelay: "", //req
             defaultOptionIndex: "", // -1 if no deafult req
@@ -299,8 +299,13 @@ const QUESTIONS_WITH_OPTIONS = {
             options: [
               // This will be a input box
               {
-                displayText: "Yes",
-                value: "yes ",
+                displayText: "Submit",
+                value: "submit ",
+                image: "",
+              },
+              {
+                displayText: "Skip",
+                value: "skip ",
                 image: "",
               },
             ],
