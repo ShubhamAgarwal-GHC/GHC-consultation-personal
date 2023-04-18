@@ -1561,7 +1561,7 @@ const QUESTIONS_WITH_OPTIONS = {
                 image: "",
               },
               {
-                displayText: "6_8_hours",
+                displayText: "6-8 hours",
                 value: "water_only ",
                 image: "",
               },

@@ -5,17 +5,26 @@ import { Context } from "./Store";
 import "../Css/BookingSelectionPage.css"
 
 const BookingSelectionPage = () => {
-  const [consultDataState] = useContext(Context); // this is the global object which stores all the info
+  const [consultDataState, setConsultDataState] = useContext(Context); // this is the global object which stores all the info
   const navigate = useNavigate();
-  // console.log("consultDataState",consultDataState);
 
   const handleFreeConsultation = () => {
+    setConsultDataState((prevState) => {
+      prevState.booking = CONSTANT.FreeConsultation;
+      prevState.consultation_completion_status = CONSTANT.COMPLETED;
+      return prevState;
+    });
     navigate("/freeConsultation", {
         state: {},
       });
   }
 
   const handleRecommendadtion = () => {
+    setConsultDataState((prevState) => {
+      prevState.booking = CONSTANT.FreeRecommendation;
+      prevState.consultation_completion_status = CONSTANT.COMPLETED;
+      return prevState;
+    });
     navigate("/recommendProduct", {
       state: {},
     });

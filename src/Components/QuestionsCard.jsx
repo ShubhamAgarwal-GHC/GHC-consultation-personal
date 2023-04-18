@@ -11,7 +11,10 @@ const QuestionsCard = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [currentPageIndex, setCurrentPageIndex] = useState(0); //keep track of current question 
+  const [currentPageIndex, setCurrentPageIndex] = useState(
+    JSON.parse(sessionStorage.getItem("currentPageIndex")) || 0
+  ); //keep track of current question
+  
   const [display, setDisplay] = useState(true);
 
   const { brand, assessmentType, categoryType } = location.state;
@@ -19,7 +22,9 @@ const QuestionsCard = () => {
   const QUESTIONS_ARRAY = QUESTIONS_OBJECT.questions;
   const OptionComponentToRender = OPTIONS_COMPONENT[QUESTIONS_ARRAY[currentPageIndex].optionType];
   const [consultDataState, setConsultDataState] = useContext(Context); // this is the global object which stores all the info
-  const [optionSelectedObj, setOptionSelectedObj] = useState({});
+  const [optionSelectedObj, setOptionSelectedObj] = useState(
+    JSON.parse(sessionStorage.getItem("optionSelectedObj")) || {}
+  );
 
   let currentPageIndexValue = currentPageIndex;
   if(QUESTIONS_ARRAY[currentPageIndex]["skipQuestionReq"]) {
@@ -36,8 +41,18 @@ const QuestionsCard = () => {
     setDisplay(true);
     setCurrentPageIndex(currentPageIndexValue);
 
+    console.log("local",consultDataState);
+    sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
+
+    sessionStorage.setItem("currentPageIndex", JSON.stringify(currentPageIndex));
+
+    setCurrentPageIndex(JSON.parse(sessionStorage.getItem("currentPageIndex")) || 0);
+    // setOptionSelectedObj(JSON.parse(sessionStorage.getItem("optionSelectedObj")) || {});
+    console.log("optionSelectedObj",optionSelectedObj);
+
     return () => clearTimeout(timerId);
-  }, [optionSelectedObj,currentPageIndexValue,quotesDisplayTime]);
+  }, [optionSelectedObj,currentPageIndexValue,quotesDisplayTime,consultDataState,currentPageIndex]);
+
 
   const handleNextPage = (optionsSelectedValues) => {
 

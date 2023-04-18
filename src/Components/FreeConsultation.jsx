@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import CONSTANT from "../Constants/constant.json";
 import { Context } from "./Store";
 import "../Css/FreeConsultation.css";
 const FreeConsultation = () => {
   const [consultDataState, setConsultDataState] = useContext(Context);
+
+  useEffect(() => {
+    console.log("FreeConsul",consultDataState);
+    sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
+  }, [consultDataState]);
+
   console.log("setConsultDataState", setConsultDataState);
 
   const handleClick = () => {
