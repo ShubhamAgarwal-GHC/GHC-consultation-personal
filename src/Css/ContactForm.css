@@ -80,12 +80,12 @@ form {
     margin-bottom: 10%;
 }
 
-.submit {
+.submit-form {
     display: flex;
     justify-content: center;
 }
 
-.submit>button {
+.submit-form>button {
     /* border: 2px solid pink; */
     background: #333333;
     border-radius: 20px;
@@ -104,12 +104,12 @@ form {
 }
 
 @media only screen and (max-device-width: 480px) {
-    .submit {
+    .submit-form {
         position: absolute;
         bottom: 0;
     }
 
-    .submit>button {
+    .submit-form>button {
         border-radius: 0;
         margin: 0;
         display: block;
