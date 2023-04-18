@@ -14,6 +14,7 @@ const BookingSelectionPage = () => {
       prevState.consultation_completion_status = CONSTANT.COMPLETED;
       return prevState;
     });
+    sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
     navigate("/freeConsultation", {
         state: {},
       });
@@ -25,6 +26,7 @@ const BookingSelectionPage = () => {
       prevState.consultation_completion_status = CONSTANT.COMPLETED;
       return prevState;
     });
+    sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
     navigate("/recommendProduct", {
       state: {},
     });
