@@ -44,15 +44,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-{/* <div className="header-assessment-list">
-{CONSTANT.BANNER_INFO.map((bannerText, index) => {
-  return (
-    <li className="header-text" key={index}>
-      {bannerText}
-    </li>
-  );
-})}
-</div> */}
-
