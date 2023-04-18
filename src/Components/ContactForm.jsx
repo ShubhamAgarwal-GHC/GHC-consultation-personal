@@ -13,8 +13,6 @@ const ContactForm = () => {
   useEffect(() => {
     setConsultDataState((previuosState) => {
       previuosState.user_survey = [];
-      previuosState.firstName = "";
-      previuosState.phone = "";
       return previuosState;
     })
     sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
@@ -47,7 +45,7 @@ const ContactForm = () => {
         prevState.phone = formData.phone;
         return prevState;
       });
-      console.log("ContactForm", consultDataState);
+      sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
 
       if(consultDataState["consultation_type"] === "short") {
         navigate("/questions", {
