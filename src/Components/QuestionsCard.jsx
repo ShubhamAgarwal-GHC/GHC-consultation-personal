@@ -11,20 +11,27 @@ const QuestionsCard = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  //keep track of current question
   const [currentPageIndex, setCurrentPageIndex] = useState(
     JSON.parse(sessionStorage.getItem("currentPageIndex")) || 0
-  ); //keep track of current question
+  ); 
+
+  // This is the global object which stores all the info till now
+  const [consultDataState, setConsultDataState] = useContext(Context); 
+
+  // Stores the answer selected for the questions
+  const [optionSelectedObj, setOptionSelectedObj] = useState({});
   
+  //Used to check and display the Quotes/fact if any there in the question
   const [display, setDisplay] = useState(true);
 
+  // Below few lines get the basic details for the current question
   const { brand, assessmentType, categoryType } = location.state;
   const QUESTIONS_OBJECT = QUESTIONS_WITH_OPTIONS[brand][assessmentType][categoryType];
   const QUESTIONS_ARRAY = QUESTIONS_OBJECT.questions;
   const OptionComponentToRender = OPTIONS_COMPONENT[QUESTIONS_ARRAY[currentPageIndex].optionType];
-  const [consultDataState, setConsultDataState] = useContext(Context); // this is the global object which stores all the info
-  const [optionSelectedObj, setOptionSelectedObj] = useState(
-    JSON.parse(sessionStorage.getItem("optionSelectedObj")) || {}
-  );
+  
+ 
 
   let currentPageIndexValue = currentPageIndex;
   if(QUESTIONS_ARRAY[currentPageIndex]["skipQuestionReq"]) {
@@ -47,7 +54,6 @@ const QuestionsCard = () => {
     sessionStorage.setItem("currentPageIndex", JSON.stringify(currentPageIndex));
 
     setCurrentPageIndex(JSON.parse(sessionStorage.getItem("currentPageIndex")) || 0);
-    // setOptionSelectedObj(JSON.parse(sessionStorage.getItem("optionSelectedObj")) || {});
     console.log("optionSelectedObj",optionSelectedObj);
 
     return () => clearTimeout(timerId);
