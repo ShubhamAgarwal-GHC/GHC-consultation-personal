@@ -63,7 +63,6 @@ const QuestionsCard = () => {
         [currentPageIndex] : optionsSelectedValues
       }
     })
-    //end
 
     setConsultDataState((prevState) => {
       const user_survey_data = prevState.user_survey;
@@ -94,18 +93,6 @@ const QuestionsCard = () => {
         percentage = {((currentPageIndex + 1) / QUESTIONS_ARRAY.length) * 100}
         handleNextPage = {handleNextPage}
       />}
-
-      {/* <button onClick={handlePreviousPage} disabled={currentPageIndex === 0}>
-        Previous
-      </button>
-      <span>{`Page ${currentPageIndex + 1} of ${QUESTIONS_ARRAY.length}`}</span>
-      <button
-        onClick={handleNextPage}
-        // disabled={currentPageIndex === QUESTIONS_ARRAY.length - 1}
-      >
-        Next
-      </button> */}
-
     </div>
   );
 };

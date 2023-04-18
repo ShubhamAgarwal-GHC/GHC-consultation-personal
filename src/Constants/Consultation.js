@@ -16,7 +16,7 @@ import dry_skin from "../Images/dry_skin.png"
 
 /*
             NOTE-1
-  1: skipToQuestion is a req function
+  1: skipToQuestion is a req function if we need to skip question based on some logic
   2: the argument passed is a object which contains the options selected for all previous questions
   3: below is the sample obj structure
   4: obj : {
