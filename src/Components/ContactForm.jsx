@@ -11,8 +11,8 @@ const ContactForm = () => {
   const [consultDataState, setConsultDataState] = useContext(Context);
 
   useEffect(() => {
-    console.log("ContactForm", consultDataState);
-  },[consultDataState])
+    sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
+  }, [consultDataState]);
 
 
   const [formData, setFormData] = useState({

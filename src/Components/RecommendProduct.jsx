@@ -77,10 +77,10 @@ const RecommendProduct = () => {
         <h1 className="tagline">{tagLines}</h1>        
       </div>
       <div className="products">
-        {shopifyProducts.map((product) => {
+        {shopifyProducts.map((product,key) => {
           const productInfo = getProuctInfo(product);
           return (
-            <div className="product">
+            <div className="product" key={key}>
               <img src={productInfo.image} alt="" />
               <p className="title">{productInfo.title}</p>
               <div className="price">

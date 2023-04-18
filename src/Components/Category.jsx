@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { CATEGORIES_FOR_ASSESSMENT } from "../Constants/Consultation";
 import CONSTANT from "../Constants/constant.json";
@@ -14,6 +14,10 @@ const Category = () => {
   const BRAND = process.env.REACT_APP_BRAND.toUpperCase();
   const ASSESSMENT_TYPE = location.state.cardType.toUpperCase();
   const CATEGORIES = CATEGORIES_FOR_ASSESSMENT[BRAND][ASSESSMENT_TYPE];
+
+  useEffect(() => {
+    sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
+  }, [consultDataState]);
 
   const handleClick = (index) => {
     const category = CATEGORIES[index].toUpperCase();
