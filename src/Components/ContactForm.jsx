@@ -1,14 +1,18 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Context } from "./Store";
 import CONSTANT from "../Constants/constant.json";
 import "../Css/ContactForm.css"
 
-function ContactForm() {
+const ContactForm = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const [consultDataState, setConsultDataState] = useContext(Context);
+
+  useEffect(() => {
+    console.log("ContactForm", consultDataState);
+  },[consultDataState])
 
 
   const [formData, setFormData] = useState({
@@ -106,7 +110,7 @@ function ContactForm() {
             {errors.phone && <span className="error">{errors.phone}</span>}
           </label>
         </div>
-        <div className="submit">
+        <div className="submit-form">
           <button type="submit">{CONSTANT.Proceed}</button>
         </div>
       </form>

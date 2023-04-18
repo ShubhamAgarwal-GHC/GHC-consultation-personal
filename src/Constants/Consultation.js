@@ -1,5 +1,7 @@
 import Type1 from "../Components/Options/Type1";
 import UploadImage from "../Components/Options/UploadImage";
+import InputText from "../Components/Options/InputText";
+
 import along_the_hairline from "../Images/along_the_hairline.png"
 import overall_hairloss from "../Images/overall_hairloss.png"
 import receding_hairline_and_overall_thining from "../Images/receding_hairline_and_overall_thining.png"
@@ -11,11 +13,6 @@ import aging_wrinkles from "../Images/aging_&_wrinkles.png"
 import dark_circles from "../Images/dark_circles.png"
 import spot_marks from "../Images/spots_&_marks.png"
 import dry_skin from "../Images/dry_skin.png"
-
-
-
-// import Type1 from "../Components/Options/Type1";
-// import "" from "../Images/"".png";
 
 /*
             NOTE-1
@@ -62,6 +59,7 @@ const CATEGORIES_FOR_ASSESSMENT = {
 const OPTIONS_COMPONENT = {
   Type1: Type1,
   UploadImage: UploadImage,
+  InputText: InputText,
 };
 
 // all questions/options number are 0-index based
@@ -1010,8 +1008,763 @@ const QUESTIONS_WITH_OPTIONS = {
           },
         ],
       },
-      WELLNESS: {},
-      BEARD: {},
+      BEARD: {
+        recommandTagLine : "Based on your BEARD analysis,this routine will help you transform your BEARD to the healthiest",
+        isProgressBarRequired: true,
+        questions: [
+          {
+            questionId: 0,
+            skipQuestionReq : false,
+            nextQuestionid: 1,
+            previousQuestionId: -1,
+            optionType: "Type1",
+            question: "What is the current condition of your facial hair?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Patchy beard",
+                value: "patchy_beard",
+                image: "",
+              },
+              {
+                displayText: "No Beard",
+                value: "no_Beard",
+                image: "",
+              },
+              {
+                displayText: "Sparse facial hair (only mustache and chin hair)",
+                value: "sparse_facial_hair",
+                image: "",
+              },
+              {
+                displayText: "Excellent beard, just in need of beard care products",
+                value: "excellent_beard_just_in_need_of_beard_care_products",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 1,
+            skipQuestionReq : false,
+            nextQuestionid: 2,
+            previousQuestionId: 0,
+            optionType: "Type1",
+            question: "How often do you groom your beard?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Daily",
+                value: "daily",
+                image: "",
+              },
+              {
+                displayText: "Weekly",
+                value: "weekly",
+                image: "",
+              },
+              {
+                displayText: "monthly",
+                value: "oily_in_t_zone",
+                image: "",
+              },
+              {
+                displayText: "Occasionally",
+                value: "occasionally",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 2,
+            skipQuestionReq : false,
+            nextQuestionid: 3,
+            previousQuestionId: 1,
+            optionType: "Type1",
+            question: "What tools do you use for beard grooming?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Beard trimmer",
+                value: "beard_trimmer",
+                image: "",
+              },
+              {
+                displayText: "Scissors",
+                value: "scissors",
+                image: "",
+              },
+              {
+                displayText: "Razor",
+                value: "razor",
+                image: "",
+              },
+              {
+                displayText: "Beard comb/brush",
+                value: "beard_comb_brush",
+                image: "",
+              },
+              {
+                displayText: "Other",
+                value: "other",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 3,
+            skipQuestionReq : false,
+            nextQuestionid: 4,
+            previousQuestionId: 2,
+            optionType: "Type1",
+            question: "What is your preferred beard style?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Clean-shaven",
+                value: "clean_shaven",
+                image: "",
+              },
+              {
+                displayText: "stubble",
+                value: "stubble",
+                image: "",
+              },
+              {
+                displayText: "Short beard",
+                value: "short_beard",
+                image: "",
+              },
+              {
+                displayText: "Medium beard",
+                value: "medium_beard",
+                image: "",
+              },
+              {
+                displayText: "Long beard",
+                value: "long_beard",
+                image: "",
+              },
+              {
+                displayText: "Other",
+                value: "other",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 4,
+            skipQuestionReq : false,
+            nextQuestionid: 5,
+            previousQuestionId: 3,
+            optionType: "Type1",
+            question: "How do you moisturize your beard?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Beard oil",
+                value: "beard_oil ",
+                image: "",
+              },
+              {
+                displayText: "Beard balm",
+                value: "beard_balm",
+                image: "",
+              },
+              {
+                displayText: "Beard conditioner",
+                value: "beard_conditioner",
+                image: "",
+              },
+              {
+                displayText: "Natural oils (e.g., coconut oil, jojoba oil)",
+                value: "natural_oils",
+                image: "",
+              },
+              {
+                displayText: "I don't moisturize my beard",
+                value: "I_don't_moisturize_my_beard",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 5,
+            skipQuestionReq : false,
+            nextQuestionid: 6,
+            previousQuestionId: 4,
+            optionType: "Type1",
+            question: "How do you deal with beard dandruff or dryness?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Use a beard oil/balm",
+                value: "use_a_beard_oil_balm",
+                image: "",
+              },
+              {
+                displayText: "Use a beard conditioner",
+                value: "use_a_beard_conditioner",
+                image: "",
+              },
+              {
+                displayText: "Exfoliate the skin under the beard",
+                value: "exfoliate_the_skin_under_the_beard",
+                image: "",
+              },
+              {
+                displayText: "Other",
+                value: "other",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 6,
+            skipQuestionReq : false,
+            nextQuestionid: 7,
+            previousQuestionId: 5,
+            optionType: "Type1",
+            question: "How do you clean your beard?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Beard wash/shampoo",
+                value: "beard_wash_shampoo",
+                image: "",
+              },
+              {
+                displayText: "Regular shampoo/soap",
+                value: "regular_shampoo_soap ",
+                image: "",
+              },
+              {
+                displayText: "Water only",
+                value: "water_only ",
+                image: "",
+              },
+              {
+                displayText: "Other",
+                value: "other ",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 7,
+            skipQuestionReq : false,
+            nextQuestionid: 8,
+            previousQuestionId: 6,
+            optionType: "Type1",
+            question: "How do you maintain your beard's overall health and appearance?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: true,
+            options: [
+              {
+                displayText: "Regular grooming routine",
+                value: "regular_grooming_routine ",
+                image: "",
+              },
+              {
+                displayText: "Healthy diet and lifestyle",
+                value: "healthy_diet_and_lifestyle ",
+                image: "",
+              },
+              {
+                displayText: "Regular exercise",
+                value: "regular_exercise",
+                image: "",
+              },
+              {
+                displayText: "Proper sleep",
+                value: "proper_sleep",
+                image: "",
+              },
+              {
+                displayText: "Use of beard care products",
+                value: "use_of_beard_care_products",
+                image: "",
+              },
+              {
+                displayText: "Other",
+                value: "other",
+                image: "",
+              },
+            ],
+          },
+        ],
+      },
+      WELLNESS: {
+        recommandTagLine : "Based on your WELLNESS analysis,this routine will help you transform your WELLNESS to the healthiest",
+        isProgressBarRequired: true,
+        questions: [
+          {
+            questionId: 0,
+            skipQuestionReq : false,
+            nextQuestionid: 1,
+            previousQuestionId: -1,
+            optionType: "InputText",
+            question: "Please enter your:",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Age",
+                placeHolder: "Age in years",
+                value: "age",
+                type: "number",
+                image: "",
+              },
+              {
+                displayText: "Height",
+                placeHolder: "Height in cms",
+                value: "height",
+                type: "number",
+                image: "",
+              },
+              {
+                displayText: "Weight",
+                placeHolder: "Weight in kgs",
+                value: "weight",
+                type: "number",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 1,
+            skipQuestionReq : false,
+            nextQuestionid: 2,
+            previousQuestionId: 0,
+            optionType: "Type1",
+            question: "Please select the option that best describes your current physical condition:",
+            quotes: "Eating clean at regular intervals can help you notice changes in your weight management journey",
+            quotesDelay: 2000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Overweight/Obese",
+                value: "overweight_obese",
+                image: "",
+              },
+              {
+                displayText: "Weak bones/muscles",
+                value: "weak_bones_muscles",
+                image: "",
+              },
+              {
+                displayText: "Weak joints",
+                value: "weak_joints",
+                image: "",
+              },
+              {
+                displayText: "Knee/Shoulder/Joint pain",
+                value: "knee_shoulder_joint_pain",
+                image: "",
+              },
+              {
+                displayText: "Body fatigue",
+                value: "body_fatigue",
+                image: "",
+              },
+              {
+                displayText: "Stretch marks on the skin",
+                value: "stretch_marks_on_the_skin",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 2,
+            skipQuestionReq : false,
+            nextQuestionid: 3,
+            previousQuestionId: 1,
+            optionType: "Type1",
+            question: "How frequently do you consume food and beverages in a day, including tea, coffee, fruits, salads, and snacks?",
+            quotes: "Your metabolism is highly responsive to your daily routine and adjusts accordingly.",
+            quotesDelay: 1000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "More than 6 times",
+                value: "more_than_6_times",
+                image: "",
+              },
+              {
+                displayText: "4-6 times",
+                value: "4_6_times",
+                image: "",
+              },
+              {
+                displayText: "3 times",
+                value: "3_times",
+                image: "",
+              },
+              {
+                displayText: "Less than 3 times",
+                value: "less_than_3_times",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 3,
+            skipQuestionReq : false,
+            nextQuestionid: 4,
+            previousQuestionId: 2,
+            optionType: "Type1",
+            question: "What is your daily water intake in liters?",
+            quotes: "There's something special about outside food--tastier, love! Though homemade food is healthy :)",
+            quotesDelay: 1000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "1-2 liters",
+                value: "1_2_liters",
+                image: "",
+              },
+              {
+                displayText: "2-3 liters",
+                value: "2_3_liters",
+                image: "",
+              },
+              {
+                displayText: "3-4 liters",
+                value: "3_4_liters",
+                image: "",
+              },
+              {
+                displayText: "4-5 liters",
+                value: "4_5_liters",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 4,
+            skipQuestionReq : false,
+            nextQuestionid: 5,
+            previousQuestionId: 3,
+            optionType: "Type1",
+            question: "How frequently do you dine at restaurants?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Once per week",
+                value: "once_per_week ",
+                image: "",
+              },
+              {
+                displayText: "Several times per week",
+                value: "several_times_per_week",
+                image: "",
+              },
+              {
+                displayText: "Never dine out",
+                value: "never_dine_out",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 5,
+            skipQuestionReq : false,
+            nextQuestionid: 6,
+            previousQuestionId: 4,
+            optionType: "Type1",
+            question: "How frequently do you consume junk food?",
+            quotes: "A good diet and sufficient rest are crucial to maintaining healthy skin.",
+            quotesDelay: 1000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Regularly",
+                value: "regularly",
+                image: "",
+              },
+              {
+                displayText: "Occasionally",
+                value: "occasionally",
+                image: "",
+              },
+              {
+                displayText: "Never",
+                value: "never",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 6,
+            skipQuestionReq : false,
+            nextQuestionid: 7,
+            previousQuestionId: 5,
+            optionType: "Type1",
+            question: "How much sleep do you typically get per night?",
+            quotes: "Let's not tell your boss how many hours you worked yesterday.",
+            quotesDelay: 1000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Less than 4 hours",
+                value: "less_than_4_hours",
+                image: "",
+              },
+              {
+                displayText: "4-6 hours",
+                value: "4_6_hours ",
+                image: "",
+              },
+              {
+                displayText: "6_8_hours",
+                value: "water_only ",
+                image: "",
+              },
+              {
+                displayText: "8-10 hours",
+                value: "8_10_hours ",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 7,
+            skipQuestionReq : false,
+            nextQuestionid: 8,
+            previousQuestionId: 6,
+            optionType: "Type1",
+            question: "What dietary choice do you make?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Lacto-vegetarian (includes milk products)",
+                value: "lacto_vegetarian ",
+                image: "",
+              },
+              {
+                displayText: "Vegan (excludes milk products)",
+                value: "vegan ",
+                image: "",
+              },
+              {
+                displayText: "Non-vegetarian (includes meat and animal products)",
+                value: "non_vegetarian",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 8,
+            skipQuestionReq : false,
+            nextQuestionid: 9,
+            previousQuestionId: 7,
+            optionType: "Type1",
+            question: "How long is your typical workday in terms of hours?",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Less than 9 hours",
+                value: "less_than_9_hours",
+                image: "",
+              },
+              {
+                displayText: "9-10 hours",
+                value: "9_10_hours ",
+                image: "",
+              },
+              {
+                displayText: "10-12 hours",
+                value: "10_12_hours",
+                image: "",
+              },
+              {
+                displayText: "12 hours or more",
+                value: "12_hours_or_more",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 9,
+            skipQuestionReq : false,
+            nextQuestionid: 10,
+            previousQuestionId: 8,
+            optionType: "Type1",
+            question: "How frequently do you engage in smoking or drinking behaviors?",
+            quotes: "Fact: Your metabolism is quite “adaptable.” It will adjust based on what you do in your daily life.",
+            quotesDelay: 2000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Daily",
+                value: "daily",
+                image: "",
+              },
+              {
+                displayText: "Occasionally",
+                value: "occasionally ",
+                image: "",
+              },
+              {
+                displayText: "Never",
+                value: "never",
+                image: "",
+              },
+            ],
+          },
+      
+          
+          {
+            questionId: 10,
+            skipQuestionReq : false,
+            nextQuestionid: 11,
+            previousQuestionId: 9,
+            optionType: "Type1",
+            question: "What is your exercise frequency? (No judgments here)",
+            quotes: "Some medical conditions do require a special plan. Help us find you a healthy way to manage your wellness",
+            quotesDelay: 2000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "No exercise at all",
+                value: "no_exercise_at_all",
+                image: "",
+              },
+              {
+                displayText: "Daily",
+                value: "daily ",
+                image: "",
+              },
+              {
+                displayText: "5-6 days a week",
+                value: "5_6_days_a_week",
+                image: "",
+              },
+              {
+                displayText: "1-2 days a week",
+                value: "1_2_days_a_week",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 11,
+            skipQuestionReq : false,
+            nextQuestionid: 12,
+            previousQuestionId: 10,
+            optionType: "Type1",
+            question: "Have you ever experienced allergic reactions to any of the following components?",
+            quotes: "Listen to our bodies and understand them before starting any treatment",
+            quotesDelay: 2000,
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Glucosamine",
+                value: "glucosamine",
+                image: "",
+              },
+              {
+                displayText: "Chondroitin",
+                value: "chondroitin ",
+                image: "",
+              },
+              {
+                displayText: "Methylsulfonylmethane (MSM)",
+                value: "methylsulfonylmethane",
+                image: "",
+              },
+              {
+                displayText: "None of the above",
+                value: "none_of_the_above",
+                image: "",
+              },
+            ],
+          },
+      
+          {
+            questionId: 12,
+            skipQuestionReq : false,
+            nextQuestionid: 13,
+            previousQuestionId: 11,
+            optionType: "Type1",
+            question: "Have you previously used any healthcare or nutritional products? ",
+            quotes: "",
+            quotesDelay: "",
+            defaultOptionIndex: "",
+            multipleSelectAllowed: false,
+            options: [
+              {
+                displayText: "Yes",
+                value: "yes",
+                image: "",
+              },
+              {
+                displayText: "No",
+                value: "no ",
+                image: "",
+              },
+            ],
+          },
+        ],
+      },
     },
   },
   SATURN: {
