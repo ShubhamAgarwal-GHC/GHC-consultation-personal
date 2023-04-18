@@ -91,11 +91,14 @@ const QuestionsCard = () => {
 
     setConsultDataState((prevState) => {
       const user_survey_data = prevState.user_survey;
-      user_survey_data.push({
-        question: QUESTIONS_ARRAY[currentPageIndex].question,
-        answer: optionsSelectedValues,
-      });
-      prevState.user_survey = user_survey_data;
+      if(user_survey_data.length < QUESTIONS_ARRAY.length){
+        user_survey_data.push({
+          question: QUESTIONS_ARRAY[currentPageIndex].question,
+          answer: optionsSelectedValues,
+        });
+        prevState.user_survey = user_survey_data;
+      }
+      
       return prevState;
     });
     console.log("QuestionsCard", consultDataState);

@@ -964,9 +964,7 @@ const QUESTIONS_WITH_OPTIONS = {
               },
             ],
           },
-      
-      
-                
+            
           {
             questionId: 8,
             skipQuestionReq : false,
