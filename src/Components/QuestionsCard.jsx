@@ -67,7 +67,7 @@ const QuestionsCard = () => {
     );
     setDisplay(true);
 
-    // updating the session storage
+    //updating the session storage
     sessionStorage.setItem(
       "consultDataState",
       JSON.stringify(consultDataState)
