@@ -11,8 +11,15 @@ const ContactForm = () => {
   const [consultDataState, setConsultDataState] = useContext(Context);
 
   useEffect(() => {
+    setConsultDataState((previuosState) => {
+      previuosState.user_survey = [];
+      previuosState.firstName = "";
+      previuosState.phone = "";
+      return previuosState;
+    })
     sessionStorage.setItem("consultDataState", JSON.stringify(consultDataState));
-  }, [consultDataState]);
+    sessionStorage.setItem("currentPageIndex", JSON.stringify(0));
+  }, [consultDataState,setConsultDataState]);
 
 
   const [formData, setFormData] = useState({

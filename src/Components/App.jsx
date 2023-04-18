@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 
 
@@ -14,7 +14,14 @@ import FreeConsultation from "./FreeConsultation";
 
 import ContactForm from "./ContactForm"
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+    sessionStorage.removeItem("consultDataState");
+    sessionStorage.removeItem("currentPageIndex");
+  })
+
+
   return (
       <div className="main-container">
         <Store>
